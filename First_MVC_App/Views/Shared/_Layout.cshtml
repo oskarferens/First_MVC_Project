@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="logotype">
+        <h1>Lorem Ipsum</h1>
+    </div>
+
+    <header>
+    <nav>
+        <ul>
+            <li><a asp-controller="Home" asp-action="About">About</a></li>
+            <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+            <li><a asp-controller="Home" asp-action="Projects">Project</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer class="container fixed-bottom">
+        <p>
+            &copy; @DateTime.Now.ToString("yyyy-MM-dd") Oskar Ferens
+        </p>
+    </footer>
+</body>
+</html>

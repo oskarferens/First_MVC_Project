@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "cxaUMw3zvyM7ts5zeNgOk7be7yUpN2iJNYGzpKJYfHA=",
+  "Source": "First_MVC_App",
+  "BasePath": "_content/First_MVC_App",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "First_MVC_App\\wwwroot",
+      "Source": "First_MVC_App",
+      "ContentRoot": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\",
+      "BasePath": "_content/First_MVC_App",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
