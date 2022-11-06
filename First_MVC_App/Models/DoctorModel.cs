@@ -13,7 +13,7 @@ namespace First_MVC_App.Models
             else if (temperature <= 35)
                 return "You have hypothermia";
             else
-                return "You are healthy!";
+                return "You are healthy";
         }
     }
 }
