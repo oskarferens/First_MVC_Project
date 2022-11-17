@@ -13,7 +13,6 @@ namespace First_MVC_App.Controllers
                 int generatedNumber = GuessingGameModel.SetSecretNumber();
                 HttpContext.Session.SetInt32("session", generatedNumber);
             }
-
             return View();
         }
 
@@ -36,10 +35,7 @@ namespace First_MVC_App.Controllers
         {
             int generatedNumber = GuessingGameModel.SetSecretNumber();
             HttpContext.Session.SetInt32("session", generatedNumber);
-
             ViewBag.Message = string.Empty;
-
-
             return View("GuessingGame", GuessingGameModel);
         }
     }

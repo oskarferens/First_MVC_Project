@@ -7,6 +7,11 @@
         public string PhoneNumber { get; set; }
         public string City { get; set; }
 
+        public Person()
+        {
+
+        }
+
         public Person(int id, string name, string phoneNumber, string city)
         {
             Id = id;

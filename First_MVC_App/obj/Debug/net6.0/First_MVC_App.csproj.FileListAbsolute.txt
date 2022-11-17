@@ -237,3 +237,4 @@ D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\obj\Debu
 D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\obj\Debug\net6.0\First_MVC_App.pdb
 D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\obj\Debug\net6.0\First_MVC_App.genruntimeconfig.cache
 D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\obj\Debug\net6.0\ref\First_MVC_App.dll
+D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\libman.json
