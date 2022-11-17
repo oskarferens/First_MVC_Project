@@ -4,6 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib\css\bootstrap.css"/>
 </head>
 <body>
     <div class="logotype">
@@ -18,15 +19,16 @@
                 <li><a asp-controller="Home" asp-action="Projects">Project</a></li>
                 <li><a asp-controller="Doctor" asp-action="FeverCheck">Doctor</a></li>
                 <li><a asp-controller="GuessingGame" asp-action="GuessingGame">GuessingGame</a></li>
+                <li><a asp-controller="People" asp-action="PeopleList">People</a></li>
             </ul>
         </nav>
     </header>
 
-    <div>
+    <div class="container-fluid">
         @RenderBody()
     </div>
 
-    <footer class="container fixed-bottom">
+    <footer class="container-fluid">
         <p>
             &copy; @DateTime.Now.ToString("yyyy-MM-dd") Oskar Ferens
         </p>
