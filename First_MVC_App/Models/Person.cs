@@ -1,16 +1,20 @@
-﻿namespace First_MVC_App.Models
+﻿using MessagePack;
+using System.Reflection;
+
+namespace First_MVC_App.Models
 {
     public class Person
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string PhoneNumber { get; set; }
-        public string City { get; set; }
-
         public Person()
         {
 
         }
+
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string PhoneNumber { get; set; }
+        public string City { get; set; }
+        
 
         public Person(int id, string name, string phoneNumber, string city)
         {

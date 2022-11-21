@@ -1,0 +1,549 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_accordion.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_accordion.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_alert.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_alert.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_badge.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_badge.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_breadcrumb.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_button-group.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_button-group.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_buttons.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_buttons.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_card.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_card.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_carousel.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_carousel.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_close.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_close.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_containers.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_containers.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_dropdown.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_forms.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_forms.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_functions.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_functions.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_grid.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_grid.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_helpers.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_helpers.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_images.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_images.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_list-group.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_list-group.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_maps.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_maps.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_modal.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_modal.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_nav.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_nav.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_navbar.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_navbar.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_offcanvas.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_offcanvas.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_pagination.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_pagination.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_placeholders.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_placeholders.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_popover.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_popover.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_progress.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_progress.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_reboot.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_reboot.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_root.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_root.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_spinners.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_spinners.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_tables.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_tables.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_toasts.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_toasts.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_tooltip.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_transitions.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_transitions.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_type.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_type.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_utilities.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_utilities.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\_variables.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\bootstrap-grid.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\bootstrap-grid.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\bootstrap-reboot.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\bootstrap-utilities.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\bootstrap-utilities.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\bootstrap.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\forms\\_floating-labels.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\forms\\_floating-labels.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\forms\\_form-check.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\forms\\_form-check.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\forms\\_form-control.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\forms\\_form-control.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\forms\\_form-range.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\forms\\_form-range.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\forms\\_form-select.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\forms\\_form-select.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\forms\\_form-text.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\forms\\_form-text.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\forms\\_input-group.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\forms\\_input-group.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\forms\\_labels.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\forms\\_labels.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\forms\\_validation.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\forms\\_validation.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\helpers\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\helpers\\_clearfix.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\helpers\\_color-bg.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\helpers\\_color-bg.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\helpers\\_colored-links.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\helpers\\_colored-links.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\helpers\\_position.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\helpers\\_position.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\helpers\\_ratio.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\helpers\\_ratio.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\helpers\\_stacks.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\helpers\\_stacks.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\helpers\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\helpers\\_stretched-link.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\helpers\\_text-truncation.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\helpers\\_text-truncation.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\helpers\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\helpers\\_visually-hidden.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\helpers\\_vr.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\helpers\\_vr.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\mixins\\_backdrop.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\mixins\\_backdrop.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\mixins\\_banner.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\mixins\\_banner.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\mixins\\_color-scheme.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\mixins\\_color-scheme.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\mixins\\_container.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\mixins\\_container.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\mixins\\_deprecate.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\mixins\\_deprecate.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\mixins\\_image.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\mixins\\_table-variants.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\mixins\\_table-variants.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\mixins\\_utilities.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\mixins\\_utilities.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\mixins\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\mixins\\_visually-hidden.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\utilities\\_api.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\utilities\\_api.scss"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\scss\\vendor\\_rfs.scss",
+      "PackagePath": "staticwebassets\\lib\\scss\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.First_MVC_App.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.First_MVC_App.props",
+      "PackagePath": "build\\First_MVC_App.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.First_MVC_App.props",
+      "PackagePath": "buildMultiTargeting\\First_MVC_App.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.First_MVC_App.props",
+      "PackagePath": "buildTransitive\\First_MVC_App.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
