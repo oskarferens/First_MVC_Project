@@ -16,6 +16,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Country/CountryIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxDb3VudHJ5SW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Country/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Doctor/FeverCheck.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXEZldmVyQ2hlY2suY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
