@@ -13,9 +13,9 @@ namespace First_MVC_App.ViewModels
 
         public static void SeedPeople ()
         {
-            PeopleList.Add(new Person(1, "John Smith", "123", "Halmstad"));
-            PeopleList.Add(new Person(2, "Mark Timber", "321", "Göteborg"));
-            PeopleList.Add(new Person(3, "Greg Kelly", "213", "New York"));
+            PeopleList.Add(new Person(1, "John Smith", "123", 1));
+            PeopleList.Add(new Person(2, "Mark Timber", "321", 2));
+            PeopleList.Add(new Person(3, "Greg Kelly", "213", 3));
         }
     }
 }

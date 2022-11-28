@@ -4,6 +4,7 @@ using First_MVC_App.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FirstMVCApp.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221128131619_Added CountryList")]
+    partial class AddedCountryList
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -143,7 +145,14 @@ namespace FirstMVCApp.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("CityId")
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("CityId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("LanguageId")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
@@ -158,38 +167,25 @@ namespace FirstMVCApp.Migrations
 
                     b.HasIndex("CityId");
 
+                    b.HasIndex("LanguageId");
+
                     b.ToTable("PeopleList");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            CityId = 1,
+                            City = "Göteborg",
                             Name = "Oskar F",
                             PhoneNumber = "031 123 345"
                         },
                         new
                         {
                             Id = 2,
-                            CityId = 2,
+                            City = "Los Angeles",
                             Name = "Ronnie Coleman",
                             PhoneNumber = "0976 123 321"
                         });
-                });
-
-            modelBuilder.Entity("LanguagePerson", b =>
-                {
-                    b.Property<int>("LanguageListLanguageId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PeopleListId")
-                        .HasColumnType("int");
-
-                    b.HasKey("LanguageListLanguageId", "PeopleListId");
-
-                    b.HasIndex("PeopleListId");
-
-                    b.ToTable("LanguagePerson");
                 });
 
             modelBuilder.Entity("First_MVC_App.Models.City", b =>
@@ -201,28 +197,13 @@ namespace FirstMVCApp.Migrations
 
             modelBuilder.Entity("First_MVC_App.Models.Person", b =>
                 {
-                    b.HasOne("First_MVC_App.Models.City", "City")
+                    b.HasOne("First_MVC_App.Models.City", null)
                         .WithMany("Persons")
-                        .HasForeignKey("CityId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CityId");
 
-                    b.Navigation("City");
-                });
-
-            modelBuilder.Entity("LanguagePerson", b =>
-                {
                     b.HasOne("First_MVC_App.Models.Language", null)
-                        .WithMany()
-                        .HasForeignKey("LanguageListLanguageId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("First_MVC_App.Models.Person", null)
-                        .WithMany()
-                        .HasForeignKey("PeopleListId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .WithMany("PeopleList")
+                        .HasForeignKey("LanguageId");
                 });
 
             modelBuilder.Entity("First_MVC_App.Models.City", b =>
@@ -233,6 +214,11 @@ namespace FirstMVCApp.Migrations
             modelBuilder.Entity("First_MVC_App.Models.Country", b =>
                 {
                     b.Navigation("Cities");
+                });
+
+            modelBuilder.Entity("First_MVC_App.Models.Language", b =>
+                {
+                    b.Navigation("PeopleList");
                 });
 #pragma warning restore 612, 618
         }

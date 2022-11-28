@@ -8,6 +8,7 @@ namespace First_MVC_App.ViewModels
     {
         public List<City> Cities = new List<City>();
 
+        public int? CountryId { get; set; }
         [Display(Name = "City")]
         [Required]
         public string Name { get; set; }
@@ -15,6 +16,6 @@ namespace First_MVC_App.ViewModels
         [Display(Name = "Country")]
         public Country? Country { get; set; }
 
-        public int? CountryId { get; set; }
+        
     }
 }

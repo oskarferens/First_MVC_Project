@@ -32,12 +32,13 @@ namespace First_MVC_App.Controllers
                 Person person = new Person();
                 person.Name = cpvm.Name;
                 person.PhoneNumber = cpvm.PhoneNumber;
-                person.City = cpvm.City;
+                //person.City = cpvm.City;
                 //_indexer++;
                 person.Id = ++_indexer;
                 //peopleViewModel.CreatePerson(cpvm.Name, cpvm.PhoneNumber, cpvm.City);
                 //peopleViewModel.PeopleList = peopleViewModel.GetPeopleList();
                 PeopleViewModel.PeopleList.Add(person);
+
             }
             else
             {

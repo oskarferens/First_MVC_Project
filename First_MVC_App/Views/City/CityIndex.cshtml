@@ -1,0 +1,31 @@
+﻿@model CityViewModel
+@{
+    ViewData["Title"] = "CityIndex";
+}
+
+<h1>List of cities </h1>
+
+<div><a asp-action="Create" class="btn btn-primary">Add new country to list </a></div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>CityName</th>
+            <th>CountryName</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var city in Model.Cities)
+        {
+                <tr>
+                    <td>@city.Id</td>
+                    <td>@city.CityName</td>
+                    <td>@city.CountryName</td>
+                    <td><a asp-action="Delete" asp-route-id=@city.Id class="btn btn-danger">Delete</a></td>
+                </tr>
+        }
+    </tbody>
+</table>
+

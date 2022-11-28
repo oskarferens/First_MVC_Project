@@ -16,12 +16,12 @@ namespace First_MVC_App.Controllers
         }
         public IActionResult Index()
         {
-            CountryViewModel countryViewModel = new()
-            {
-                Countries = _context.CountryList.ToList()
-            };
+            //CountryViewModel countryViewModel = new()
+            //{
+            //    Countries = _context.CountryList.ToList()
+            //};
 
-            return View(countryViewModel);
+            return View(_context.CountryList.ToList());
         }
 
         public IActionResult Create()
@@ -32,6 +32,7 @@ namespace First_MVC_App.Controllers
         [HttpPost]
         public IActionResult Create(Country country)
         {
+            ModelState.Remove("Id");
             if(ModelState.IsValid)
             {
                 _context.CountryList.Add(country);
