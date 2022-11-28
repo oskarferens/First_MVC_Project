@@ -1,5 +1,6 @@
 ﻿using First_MVC_App.Data;
 using First_MVC_App.Models;
+using First_MVC_App.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 
@@ -15,9 +16,14 @@ namespace First_MVC_App.Controllers
         }
         public IActionResult Index()
         {
-            return View(_context.CountryList.ToList());
+            CountryViewModel countryViewModel = new()
+            {
+                Countries = _context.CountryList.ToList()
+            };
+
+            return View(countryViewModel);
         }
-        
+
         public IActionResult Create()
         {
             return View();
