@@ -10,8 +10,6 @@ namespace First_MVC_App.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string CountryName { get; set; }
-        public string Capital { get; set; }
-
         public List<City> Cities { get; set; } = new();
     }
 }

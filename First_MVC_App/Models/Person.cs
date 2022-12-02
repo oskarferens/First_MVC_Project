@@ -19,7 +19,6 @@ namespace First_MVC_App.Models
 
         public List<Language> LanguageList { get; set; } = new();
         
-
         public Person(int id, string name, string phoneNumber, int cityId)
         {
             Id = id;

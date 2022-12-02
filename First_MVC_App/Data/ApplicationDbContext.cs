@@ -19,7 +19,6 @@ namespace First_MVC_App.Data
         public DbSet<Country> CountryList { get; set; }
         public DbSet<Language> LanguageList { get; set; }
 
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -38,6 +37,5 @@ namespace First_MVC_App.Data
             modelBuilder.Entity<Language>().HasData(new Language { LanguageId = 3, Name = "Polish" });
             modelBuilder.Entity<Language>().HasData(new Language { LanguageId = 4, Name = "Tagalog" });
         }
-
     }
 }
