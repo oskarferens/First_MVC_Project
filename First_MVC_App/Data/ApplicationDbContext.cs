@@ -41,8 +41,10 @@ namespace First_MVC_App.Data
                .HasMany(x => x.LanguageList)
                .WithMany(x => x.PeopleList)
                .UsingEntity(j => j.HasData(
-               new { PeopleListId = 1, LanguageListLanguageId = 1 }
-               
+               new { PeopleListId = 1, LanguageListLanguageId = 1 },
+               new { PeopleListId = 2, LanguageListLanguageId = 2 },
+               new { PeopleListId = 2, LanguageListLanguageId = 3 }
+
                ));
         }
     }

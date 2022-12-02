@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace First_MVC_App.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221130105541_nnnn")]
-    partial class nnnn
+    [Migration("20221202143843_fixed-languages")]
+    partial class fixedlanguages
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -137,6 +137,9 @@ namespace First_MVC_App.Migrations
                     b.Property<int>("CityId")
                         .HasColumnType("int");
 
+                    b.Property<int>("LanguageId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -156,6 +159,7 @@ namespace First_MVC_App.Migrations
                         {
                             Id = 1,
                             CityId = 1,
+                            LanguageId = 0,
                             Name = "Oskar F",
                             PhoneNumber = "031 123 345"
                         },
@@ -163,6 +167,7 @@ namespace First_MVC_App.Migrations
                         {
                             Id = 2,
                             CityId = 2,
+                            LanguageId = 0,
                             Name = "Ronnie Coleman",
                             PhoneNumber = "0976 123 321"
                         });
@@ -181,21 +186,40 @@ namespace First_MVC_App.Migrations
                     b.HasIndex("PeopleListId");
 
                     b.ToTable("LanguagePerson");
+
+                    b.HasData(
+                        new
+                        {
+                            LanguageListLanguageId = 1,
+                            PeopleListId = 1
+                        },
+                        new
+                        {
+                            LanguageListLanguageId = 2,
+                            PeopleListId = 2
+                        },
+                        new
+                        {
+                            LanguageListLanguageId = 3,
+                            PeopleListId = 2
+                        });
                 });
 
             modelBuilder.Entity("First_MVC_App.Models.City", b =>
                 {
-                    b.HasOne("First_MVC_App.Models.Country", null)
-                        .WithMany("Cities")
+                    b.HasOne("First_MVC_App.Models.Country", "Country")
+                        .WithMany("CityList")
                         .HasForeignKey("CountryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Country");
                 });
 
             modelBuilder.Entity("First_MVC_App.Models.Person", b =>
                 {
                     b.HasOne("First_MVC_App.Models.City", "City")
-                        .WithMany()
+                        .WithMany("PersonList")
                         .HasForeignKey("CityId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -218,9 +242,14 @@ namespace First_MVC_App.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("First_MVC_App.Models.City", b =>
+                {
+                    b.Navigation("PersonList");
+                });
+
             modelBuilder.Entity("First_MVC_App.Models.Country", b =>
                 {
-                    b.Navigation("Cities");
+                    b.Navigation("CityList");
                 });
 #pragma warning restore 612, 618
         }

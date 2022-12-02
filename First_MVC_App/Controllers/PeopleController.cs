@@ -10,8 +10,6 @@ namespace First_MVC_App.Controllers
 {
     public class PeopleController : Controller
     {
-        public static PeopleViewModel peopleViewModel { get; set; } = new PeopleViewModel();
-        static private int _indexer;
         private readonly ApplicationDbContext _context;
 
         public PeopleController(ApplicationDbContext context)
@@ -20,46 +18,35 @@ namespace First_MVC_App.Controllers
         }
         public IActionResult Index()
         {
-            if (PeopleViewModel.PeopleList.Count() == 0)
-            {
-                _indexer = PeopleViewModel.PeopleList.Count();
-                peopleViewModel.tempList = _context.PeopleList.Include(x=>x.City).ToList();
-            }
-            peopleViewModel.cpvm = new();
+            var people = _context.PeopleList.Include(x => x.City).Include(y => y.LanguageList).ToList();
+            //peopleViewModel.people = _context.People.Include(x => x.City).Include(z => z.City.Country).ToList();
 
-            return View("PeopleList",peopleViewModel);
+            return View(people);
         }
 
         [HttpPost]
-        public IActionResult CreatePerson(CreatePersonViewModel cpvm)
+        public IActionResult Create(CreatePersonViewModel cpvm)
         {
-            peopleViewModel.cpvm = new();
             if (ModelState.IsValid)
             {
                 Person person = new Person();
-                person.Name = cpvm.Name;
-                person.PhoneNumber = cpvm.PhoneNumber;
-
-                PeopleViewModel.PeopleList.Add(person);
+                person.Name = cpvm.Person;
                 _context.PeopleList.Add(person);
                 _context.SaveChanges();
-
             }
-            else
-            {
-                return RedirectToAction("PeopleList");
-            }
-
-            return RedirectToAction("PeopleList");
+            return RedirectToAction("Index");
         }
 
 
-        public IActionResult DeletePerson(int id)
+        public IActionResult Delete(int Id)
         {
-            Person p = PeopleViewModel.PeopleList.FirstOrDefault(p => p.Id == id);
-            PeopleViewModel.PeopleList.Remove(p);
-            //createPersonViewModel.DeletePerson(person);
-            return RedirectToAction("PeopleList");
+            var personToRemove = _context.PeopleList.FirstOrDefault(x => x.Id == Id);
+            if (personToRemove != null)
+            {
+                _context.PeopleList.Remove(personToRemove);
+                _context.SaveChanges();
+            }
+            return RedirectToAction("Index");
         }
 
 

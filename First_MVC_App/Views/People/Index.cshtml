@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Person>
+@{
+    ViewData["Title"] = "PeopleIndex";
+}
+
+<h1>List of people </h1>
+
+<div><a asp-action="Create" class="btn btn-primary">Add new people to list </a></div>
+
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>Name</th>
+            <th>PhoneNumber</th>
+            <th>City</th>
+            <th>Languages</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var person in Model)
+        {
+            <tr>
+                <td>@person.Name</td>
+                <td>@person.PhoneNumber</td>
+                <td>@person.City.CityName</td>
+                <td>
+                    <ul>
+                        @foreach (var language in person.LanguageList)
+                        {
+                            <li>
+                                @language.Name
+                            </li>
+                        }
+                    </ul>
+                </td>
+                @*<td>@person.LanguageList</td>*@
+                
+                <td><a asp-action="Delete" asp-route-id=@person.Id class="btn btn-danger">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+

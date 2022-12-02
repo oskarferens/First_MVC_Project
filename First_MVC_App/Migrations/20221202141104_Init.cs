@@ -4,7 +4,7 @@
 
 namespace First_MVC_App.Migrations
 {
-    public partial class nnnn : Migration
+    public partial class Init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -62,7 +62,8 @@ namespace First_MVC_App.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CityId = table.Column<int>(type: "int", nullable: false)
+                    CityId = table.Column<int>(type: "int", nullable: false),
+                    LanguageId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -131,13 +132,18 @@ namespace First_MVC_App.Migrations
 
             migrationBuilder.InsertData(
                 table: "PeopleList",
-                columns: new[] { "Id", "CityId", "Name", "PhoneNumber" },
-                values: new object[] { 1, 1, "Oskar F", "031 123 345" });
+                columns: new[] { "Id", "CityId", "LanguageId", "Name", "PhoneNumber" },
+                values: new object[] { 1, 1, 0, "Oskar F", "031 123 345" });
 
             migrationBuilder.InsertData(
                 table: "PeopleList",
-                columns: new[] { "Id", "CityId", "Name", "PhoneNumber" },
-                values: new object[] { 2, 2, "Ronnie Coleman", "0976 123 321" });
+                columns: new[] { "Id", "CityId", "LanguageId", "Name", "PhoneNumber" },
+                values: new object[] { 2, 2, 0, "Ronnie Coleman", "0976 123 321" });
+
+            migrationBuilder.InsertData(
+                table: "LanguagePerson",
+                columns: new[] { "LanguageListLanguageId", "PeopleListId" },
+                values: new object[] { 1, 1 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_CityList_CountryId",

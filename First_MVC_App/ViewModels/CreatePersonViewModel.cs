@@ -6,6 +6,8 @@ namespace First_MVC_App.ViewModels
 {
     public class CreatePersonViewModel
     {
+        public string Person { get; set; }
+
         [Display(Name = "Full Name")]
         [Required]
         public string Name { get; set; }
@@ -17,5 +19,9 @@ namespace First_MVC_App.ViewModels
         [Display(Name = "City of Residence")]
         [Required]
         public string City { get; set; }
+        
+        [Display(Name = "Language")]
+        [Required]
+        public string Language { get; set; }
     }
 }

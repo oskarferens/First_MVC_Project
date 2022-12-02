@@ -60,8 +60,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZ3VhZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/People/PeopleList.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVvcGxlXFBlb3BsZUxpc3QuY3NodG1s
+[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/People/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVvcGxlXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/People/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVvcGxlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Shared/_CityViewModel.cshtml]
@@ -90,10 +94,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Shared/_PeopleViewModel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QZW9wbGVWaWV3TW9kZWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Shared/_personListPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9wZXJzb25MaXN0UGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/_ViewImports.cshtml]
