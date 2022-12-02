@@ -1,4 +1,7 @@
 ﻿using First_MVC_App.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System.ComponentModel.DataAnnotations;
+using System.Xml.Linq;
 
 namespace First_MVC_App.ViewModels
 {
@@ -9,13 +12,16 @@ namespace First_MVC_App.ViewModels
         public string Search { get; set; }
         public bool CaseSensitive { get; set; }
 
-        public CreatePersonViewModel cpvm { get; set; } = new CreatePersonViewModel();   
+        public CreatePersonViewModel cpvm { get; set; } = new CreatePersonViewModel();
 
-        public static void SeedPeople ()
-        {
-            PeopleList.Add(new Person(1, "John Smith", "123", 1));
-            PeopleList.Add(new Person(2, "Mark Timber", "321", 2));
-            PeopleList.Add(new Person(3, "Greg Kelly", "213", 3));
-        }
+        public int? CityId { get; set; }
+
+        [Display(Name = "Languages")]
+        [Required]
+        public List<Language>? Languages { get; set; }
+        public List<int>? LanguageIds { get; set; }
+        public List<SelectListItem> cities { get; set; }
+
+
     }
 }

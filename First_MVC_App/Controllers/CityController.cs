@@ -7,52 +7,48 @@ namespace First_MVC_App.Controllers
 {
     public class CityController : Controller
     {
-        readonly ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context;
 
         public CityController(ApplicationDbContext context)
         {
             _context = context;
         }
 
+
         public IActionResult Index()
         {
-            CityViewModel cityViewModel = new()
             {
-                Cities = _context.CityList.ToList()
-            };
-            
-            return View("CityIndex", cityViewModel);
+                return View(_context.CityList.ToList()); 
+            }
         }
-
+            //return View("CityIndex", cityViewModel);
         public IActionResult Create()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Create(City city)
+        public IActionResult Create(CreateCityViewModel ccityvm)
         {
             if (ModelState.IsValid)
             {
+;               City city = new City();
+                city.CityName = ccityvm.City;
                 _context.CityList.Add(city);
                 _context.SaveChanges();
             }
             return RedirectToAction("Index");
         }
 
-        public IActionResult Delete(int id)
+        public IActionResult Delete(int CityId)
         {
-            var countryToRemove = _context.CountryList.Find(id);
-            if (countryToRemove != null)
+            var cityToRemove = _context.CityList.FirstOrDefault(x => x.CityId == CityId);
+            if (cityToRemove != null)
             {
-                _context.CountryList.Remove(countryToRemove);
+                _context.CityList.Remove(cityToRemove);
                 _context.SaveChanges();
             }
             return RedirectToAction("Index");
         }
-
-
-
-
     }
 }

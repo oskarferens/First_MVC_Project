@@ -1,0 +1,15 @@
+﻿@model CreateLanguageViewModel
+
+<form asp-controller="Language" asp-action="CreateLanguage" method="post">
+    <h4 class="fw-bold mb-2">Add new language to list: </h4>
+    <br />
+
+    <div class="form">
+        <label asp-for="Language" class="fw-bold"></label>
+        <input class="rounded border-light m-1" asp-for="Language" />
+        <span asp-validation-for="Language"></span>
+    </div>
+    <div>
+        <input class="form-button btn btn-success m-1" type="submit" value="Add Language" />
+    </div>
+</form>

@@ -20,10 +20,10 @@
         @foreach(var country in Model)
         {
             <tr>
-                <td>@country.Id</td>
+                <td>@country.CountryId</td>
                 <td>@country.CountryName</td>
-                <td>@country.Capital</td>
-                <td><a asp-action="Delete" asp-route-id=@country.Id class="btn btn-danger">Delete</a></td>
+                
+                <td><a asp-action="Delete" asp-route-id=@country.CountryId class="btn btn-danger">Delete</a></td>
             </tr>
         }
     </tbody>

@@ -16,8 +16,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/City/CityIndex.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0eVxDaXR5SW5kZXguY3NodG1s
+[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/City/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0eVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/City/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0eVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Country/Create.cshtml]
@@ -48,24 +52,44 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9qZWN0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Language/LanguageInxed.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZ3VhZ2VcTGFuZ3VhZ2VJbnhlZC5jc2h0bWw=
+[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Language/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZ3VhZ2VcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Language/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZ3VhZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/People/PeopleList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVvcGxlXFBlb3BsZUxpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Shared/PeopleViewModel.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBlb3BsZVZpZXdNb2RlbC5jc2h0bWw=
+[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Shared/_CityViewModel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DaXR5Vmlld01vZGVsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Shared/_CreateCity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DcmVhdGVDaXR5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Shared/_CreateLanguage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DcmVhdGVMYW5ndWFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Shared/_CreatePerson.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DcmVhdGVQZXJzb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Shared/_LanguageViewModel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYW5ndWFnZVZpZXdNb2RlbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Shared/_PeopleViewModel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QZW9wbGVWaWV3TW9kZWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Shared/_personListPartial.cshtml]

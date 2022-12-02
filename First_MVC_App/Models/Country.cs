@@ -7,9 +7,9 @@ namespace First_MVC_App.Models
     public class Country
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int CountryId { get; set; }
         public string CountryName { get; set; }
-        public List<City> Cities { get; set; } = new();
+        public List<City> CityList { get; set; } = new();
+
     }
 }

@@ -17,7 +17,5 @@ namespace First_MVC_App.ViewModels
         [Display(Name = "City of Residence")]
         [Required]
         public string City { get; set; }
-
-
     }
 }

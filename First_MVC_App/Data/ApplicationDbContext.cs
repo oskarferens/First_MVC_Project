@@ -26,16 +26,24 @@ namespace First_MVC_App.Data
             modelBuilder.Entity<Person>().HasData(new Person { Id = 1, Name = "Oskar F", CityId = 1, PhoneNumber = "031 123 345" });
             modelBuilder.Entity<Person>().HasData(new Person { Id = 2, Name = "Ronnie Coleman", CityId = 2, PhoneNumber = "0976 123 321" });
 
-            modelBuilder.Entity<Country>().HasData(new Country { Id = 1, CountryName = "Sweden", Capital = "Stockholm", });
-            modelBuilder.Entity<Country>().HasData(new Country { Id = 2, CountryName = "USA", Capital = "Washington", });
+            modelBuilder.Entity<Country>().HasData(new Country { CountryId = 1, CountryName = "Sweden" });
+            modelBuilder.Entity<Country>().HasData(new Country { CountryId = 2, CountryName = "USA" });
 
-            modelBuilder.Entity<City>().HasData(new City { Id = 1, CountryName = "Sweden", CityName = "Stockholm", });
-            modelBuilder.Entity<City>().HasData(new City { Id = 2, CountryName = "USA", CityName = "Los Angeles", });
+            modelBuilder.Entity<City>().HasData(new City { CityId = 1, CityName = "Stockholm", CountryId = 1 });
+            modelBuilder.Entity<City>().HasData(new City { CityId = 2, CityName = "Los Angeles", CountryId = 2 });
 
             modelBuilder.Entity<Language>().HasData(new Language { LanguageId = 1, Name = "Swedish" });
             modelBuilder.Entity<Language>().HasData(new Language { LanguageId = 2, Name = "English" });
             modelBuilder.Entity<Language>().HasData(new Language { LanguageId = 3, Name = "Polish" });
             modelBuilder.Entity<Language>().HasData(new Language { LanguageId = 4, Name = "Tagalog" });
+
+            modelBuilder.Entity<Person>()
+               .HasMany(x => x.LanguageList)
+               .WithMany(x => x.PeopleList)
+               .UsingEntity(j => j.HasData(
+               new { PeopleListId = 1, LanguageListLanguageId = 1 }
+               
+               ));
         }
     }
 }

@@ -2,6 +2,9 @@
 using System;
 using First_MVC_App.Models;
 using First_MVC_App.ViewModels;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using First_MVC_App.Data;
 
 namespace First_MVC_App.Controllers
 {
@@ -9,17 +12,22 @@ namespace First_MVC_App.Controllers
     {
         public static PeopleViewModel peopleViewModel { get; set; } = new PeopleViewModel();
         static private int _indexer;
-        public IActionResult PeopleList()
+        private readonly ApplicationDbContext _context;
+
+        public PeopleController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+        public IActionResult Index()
         {
             if (PeopleViewModel.PeopleList.Count() == 0)
             {
-                PeopleViewModel.SeedPeople();
                 _indexer = PeopleViewModel.PeopleList.Count();
-                peopleViewModel.tempList = PeopleViewModel.PeopleList;
+                peopleViewModel.tempList = _context.PeopleList.Include(x=>x.City).ToList();
             }
             peopleViewModel.cpvm = new();
 
-            return View(peopleViewModel);
+            return View("PeopleList",peopleViewModel);
         }
 
         [HttpPost]
@@ -28,16 +36,13 @@ namespace First_MVC_App.Controllers
             peopleViewModel.cpvm = new();
             if (ModelState.IsValid)
             {
-                //PeopleViewModel peopleViewModel = new();
                 Person person = new Person();
                 person.Name = cpvm.Name;
                 person.PhoneNumber = cpvm.PhoneNumber;
-                //person.City = cpvm.City;
-                //_indexer++;
-                person.Id = ++_indexer;
-                //peopleViewModel.CreatePerson(cpvm.Name, cpvm.PhoneNumber, cpvm.City);
-                //peopleViewModel.PeopleList = peopleViewModel.GetPeopleList();
+
                 PeopleViewModel.PeopleList.Add(person);
+                _context.PeopleList.Add(person);
+                _context.SaveChanges();
 
             }
             else

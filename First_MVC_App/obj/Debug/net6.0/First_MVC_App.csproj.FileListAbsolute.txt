@@ -272,3 +272,15 @@ D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debu
 D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\Old_bin\Debug\net6.0\First_MVC_App.runtimeconfig.json
 D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\Old_bin\Debug\net6.0\First_MVC_App.staticwebassets.runtime.json
 D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\Old_bin\Debug\net6.0\libman.json
+D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\tempBin\Debug\net6.0\appsettings.Development.json
+D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\tempBin\Debug\net6.0\appsettings.json
+D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\tempBin\Debug\net6.0\First_MVC_App.deps.json
+D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\tempBin\Debug\net6.0\First_MVC_App.runtimeconfig.json
+D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\tempBin\Debug\net6.0\First_MVC_App.staticwebassets.runtime.json
+D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\tempBin\Debug\net6.0\libman.json
+D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\tempBin\Debug\net6.0\Old_bin\Debug\net6.0\appsettings.Development.json
+D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\tempBin\Debug\net6.0\Old_bin\Debug\net6.0\appsettings.json
+D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\tempBin\Debug\net6.0\Old_bin\Debug\net6.0\First_MVC_App.deps.json
+D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\tempBin\Debug\net6.0\Old_bin\Debug\net6.0\First_MVC_App.runtimeconfig.json
+D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\tempBin\Debug\net6.0\Old_bin\Debug\net6.0\First_MVC_App.staticwebassets.runtime.json
+D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\tempBin\Debug\net6.0\Old_bin\Debug\net6.0\libman.json

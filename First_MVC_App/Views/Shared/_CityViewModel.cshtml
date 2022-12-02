@@ -1,0 +1,14 @@
+﻿@model CityViewModel
+
+@foreach (var city in CityViewModel.CityList)
+{
+            <div class="row bg-light text-dark p-1">
+                <div class="col p-1">
+                    <h4>@city.CityName</h4>
+                </div>
+                <div class="col">
+                    <a class="btn btn-dark btn-sm" onclick="location.href =
+            '@Url.Action("DeleteLanguage", "CityList", new{id = city.CityId})'">Delete</a>
+                </div>
+            </div>
+}
