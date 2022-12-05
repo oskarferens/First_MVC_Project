@@ -12,7 +12,6 @@
         <tr>
             <th>Id</th>
             <th>CityName</th>
-            <th>CountryName</th>
             <th></th>
         </tr>
     </thead>
@@ -22,7 +21,6 @@
                 <tr>
                     <td>@city.CityId</td>
                     <td>@city.CityName</td>
-                    <td>@city.CountryId</td>
                     <td><a asp-action="Delete" asp-route-id=@city.CityId class="btn btn-danger">Delete</a></td>
                 </tr>
         }

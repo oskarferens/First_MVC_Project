@@ -9,6 +9,8 @@ namespace First_MVC_App.Controllers
 {
     public class LanguageController : Controller
     {
+        public static LanguageViewModel languageViewModel { get; set; } = new LanguageViewModel();
+
         readonly ApplicationDbContext _context;
         public LanguageController(ApplicationDbContext context)
         {
@@ -28,14 +30,14 @@ namespace First_MVC_App.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(CreateLanguageViewModel clvm)
+        public IActionResult Create(Language language)
         {
+            ModelState.Remove("LanguageId");
+            ModelState.Remove("PeopleList");
             if (ModelState.IsValid)
             {
-                Language language = new Language();
-                language.Name = clvm.Language;
                 _context.LanguageList.Add(language);
-                _context.SaveChanges();
+                _context.SaveChanges();s
             }
             return RedirectToAction("Index");
         }

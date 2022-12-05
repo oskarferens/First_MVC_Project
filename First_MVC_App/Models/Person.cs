@@ -9,7 +9,6 @@ namespace First_MVC_App.Models
         {
 
         }
-
         public int Id { get; set; }
         public string Name { get; set; }
         public string PhoneNumber { get; set; }
@@ -17,9 +16,6 @@ namespace First_MVC_App.Models
         public int LanguageId { get; set; }
         public City City { get; set; }
         public List<Language> LanguageList { get; set; } = new();
-
-
-
 
         public Person(int id, string name, string phoneNumber, int cityId)
         {

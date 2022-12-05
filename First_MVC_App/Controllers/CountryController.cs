@@ -2,8 +2,9 @@
 using First_MVC_App.Models;
 using First_MVC_App.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using System.ComponentModel.DataAnnotations;
+using System;
 
 namespace First_MVC_App.Controllers
 {
@@ -24,27 +25,19 @@ namespace First_MVC_App.Controllers
                 _indexer = CountryViewModel.CountryList.Count();
                 countryViewModel.TempList = _context.CountryList.Include(x => x.CityList).ToList();
             }
-            //countryViewModel.ccvm = new();
-
             return View(_context.CountryList.ToList());
         }
-            //CountryViewModel countryViewModel = new()
-            //{
-            //    Countries = _context.CountryList.ToList()
-            //};
-
-            //return View();
 
         public IActionResult Create()
         {
-            return View();
+                 return View();
         }
 
         [HttpPost]
         public IActionResult Create(Country country)
         {
             ModelState.Remove("Id");
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 _context.CountryList.Add(country);
                 _context.SaveChanges();
@@ -62,6 +55,5 @@ namespace First_MVC_App.Controllers
             }
             return RedirectToAction("Index");
         }
-
     }
 }

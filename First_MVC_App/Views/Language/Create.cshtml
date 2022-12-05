@@ -1,4 +1,4 @@
-﻿@model CreateLanguageViewModel
+﻿@model Language
 @{
     ViewData["Title"] = "Create";
 }
@@ -6,7 +6,7 @@
 <h1>Create</h1>
 
 <form asp-action="Create" method="post">
-    <label asp-for="Language"></label>
-    <input asp-for="Language" />
+    <label asp-for="Name"></label>
+    <input asp-for="Name" />
     <input type="submit" value=" Create" />
 </form>

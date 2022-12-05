@@ -2,11 +2,14 @@
 using First_MVC_App.Models;
 using First_MVC_App.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace First_MVC_App.Controllers
 {
     public class CityController : Controller
     {
+        public static CityViewModel cityViewModel { get; set; } = new CityViewModel();
+
         private readonly ApplicationDbContext _context;
 
         public CityController(ApplicationDbContext context)
@@ -24,16 +27,17 @@ namespace First_MVC_App.Controllers
             //return View("CityIndex", cityViewModel);
         public IActionResult Create()
         {
+            ViewBag.Country = new SelectList(_context.CountryList, "CountryId", "CountryName");
+
             return View();
         }
 
         [HttpPost]
-        public IActionResult Create(CreateCityViewModel ccityvm)
+        public IActionResult Create(City city)
         {
+
             if (ModelState.IsValid)
             {
-;               City city = new City();
-                city.CityName = ccityvm.City;
                 _context.CityList.Add(city);
                 _context.SaveChanges();
             }

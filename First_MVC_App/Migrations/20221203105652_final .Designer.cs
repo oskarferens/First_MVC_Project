@@ -3,6 +3,7 @@ using First_MVC_App.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace First_MVC_App.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221203105652_final ")]
+    partial class final
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -54,12 +56,6 @@ namespace First_MVC_App.Migrations
                             CityId = 2,
                             CityName = "Los Angeles",
                             CountryId = 2
-                        },
-                        new
-                        {
-                            CityId = 3,
-                            CityName = "Berlin",
-                            CountryId = 3
                         });
                 });
 
@@ -89,11 +85,6 @@ namespace First_MVC_App.Migrations
                         {
                             CountryId = 2,
                             CountryName = "USA"
-                        },
-                        new
-                        {
-                            CountryId = 3,
-                            CountryName = "Germany"
                         });
                 });
 
@@ -177,16 +168,8 @@ namespace First_MVC_App.Migrations
                             Id = 2,
                             CityId = 2,
                             LanguageId = 0,
-                            Name = "Ronnie C",
+                            Name = "Ronnie Coleman",
                             PhoneNumber = "0976 123 321"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CityId = 3,
-                            LanguageId = 0,
-                            Name = "Niklas A",
-                            PhoneNumber = "846 346 836"
                         });
                 });
 
@@ -212,16 +195,6 @@ namespace First_MVC_App.Migrations
                         },
                         new
                         {
-                            LanguageListLanguageId = 4,
-                            PeopleListId = 1
-                        },
-                        new
-                        {
-                            LanguageListLanguageId = 3,
-                            PeopleListId = 1
-                        },
-                        new
-                        {
                             LanguageListLanguageId = 2,
                             PeopleListId = 2
                         },
@@ -229,16 +202,6 @@ namespace First_MVC_App.Migrations
                         {
                             LanguageListLanguageId = 3,
                             PeopleListId = 2
-                        },
-                        new
-                        {
-                            LanguageListLanguageId = 1,
-                            PeopleListId = 3
-                        },
-                        new
-                        {
-                            LanguageListLanguageId = 2,
-                            PeopleListId = 3
                         });
                 });
 

@@ -11,6 +11,7 @@ namespace First_MVC_App.Controllers
     public class PeopleController : Controller
     {
         private readonly ApplicationDbContext _context;
+        public static PeopleViewModel peopleViewModel { get; set; } = new PeopleViewModel();
 
         public PeopleController(ApplicationDbContext context)
         {
@@ -19,24 +20,32 @@ namespace First_MVC_App.Controllers
         public IActionResult Index()
         {
             var people = _context.PeopleList.Include(x => x.City).Include(y => y.LanguageList).ToList();
-            //peopleViewModel.people = _context.People.Include(x => x.City).Include(z => z.City.Country).ToList();
-
             return View(people);
         }
 
-        [HttpPost]
-        public IActionResult Create(CreatePersonViewModel cpvm)
+        public IActionResult Create()
         {
+            ViewBag.Cities = new SelectList(_context.CityList, "CityId", "CityName");
+            ViewBag.Languages = new SelectList(_context.LanguageList, "LanguageId", "Name");
+            return View();
+        }
+
+
+        [HttpPost]
+        public IActionResult Create(Person person)
+        {
+           
+           var language = _context.LanguageList.FirstOrDefault(x => x.LanguageId == person.LanguageId);
+           person.LanguageList.Add(language);
+            ModelState.Remove("City");
+            ModelState.Remove("Id");
             if (ModelState.IsValid)
             {
-                Person person = new Person();
-                person.Name = cpvm.Person;
                 _context.PeopleList.Add(person);
                 _context.SaveChanges();
             }
             return RedirectToAction("Index");
         }
-
 
         public IActionResult Delete(int Id)
         {
@@ -49,36 +58,16 @@ namespace First_MVC_App.Controllers
             return RedirectToAction("Index");
         }
 
-
         public IActionResult Search(PeopleViewModel peopleViewModel)
         {
             if (peopleViewModel.Search != null)
             {
                 var search = peopleViewModel.Search;
-                CreatePersonViewModel createPersonViewModel = new();
 
                 PeopleViewModel vm = new PeopleViewModel();
 
                 vm.tempList = PeopleViewModel.PeopleList.Where(x => x.Name.Contains(search)).ToList();
 
-                //foreach (var person in createPersonViewModel.GetPeopleList())
-                //{
-                //    if (!peopleViewModel.CaseSensitive)
-                //    {
-                //if (person.Name.Contains(search) || person.City.Contains(search))
-                //{
-                //    peopleViewModel.PeopleList.Add(person);
-                //}
-                //    }
-                //    else
-                //    {
-                //        if (person.Name.Contains(search, StringComparison.OrdinalIgnoreCase) ||
-                //        person.City.Contains(search, StringComparison.OrdinalIgnoreCase))
-                //        {
-                //            peopleViewModel.PeopleList.Add(person);
-                //        }
-                //    }
-                //}
                 return View("PeopleList", vm);
             }
 
@@ -89,7 +78,6 @@ namespace First_MVC_App.Controllers
 
         public IActionResult SortPeople(PeopleViewModel peopleViewModel)
         {
-            CreatePersonViewModel createPersonViewModel = new();
             //var people = createPersonViewModel.GetPeopleList();
             //people.Sort((x, y) => string.Compare(x.Name, y.Name));
 
