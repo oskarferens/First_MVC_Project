@@ -10,7 +10,9 @@ namespace First_MVC_App.ViewModels
 
         public static List<City> CityList = new List<City>();
 
-        public int? CountryId { get; set; }
+        public int CityId { get; set; }
+
+        public int CountryId { get; set; }
 
         [Display(Name = "Country")]
         public Country? Country { get; set; }

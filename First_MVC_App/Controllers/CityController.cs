@@ -3,9 +3,11 @@ using First_MVC_App.Models;
 using First_MVC_App.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Authorization;
 
 namespace First_MVC_App.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class CityController : Controller
     {
         public static CityViewModel cityViewModel { get; set; } = new CityViewModel();
@@ -41,6 +43,35 @@ namespace First_MVC_App.Controllers
                 _context.CityList.Add(city);
                 _context.SaveChanges();
             }
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult EditPage(int id)
+        {
+            City city = _context.CityList.Find(id);
+            CityViewModel cityViewModel = new CityViewModel();
+
+            cityViewModel.CityName = city.CityName;
+            cityViewModel.CityId = id;
+            cityViewModel.CountryId = city.CountryId;
+
+            ViewBag.Countries = new SelectList(_context.CountryList, "CountryId", "CountryName");
+
+            return View(cityViewModel);
+        }
+
+        [HttpPost]
+        public IActionResult EditCity(CityViewModel cityViewModel)
+        {
+            City city = _context.CityList.Find(cityViewModel.CityId);
+
+            if (ModelState.IsValid)
+            {
+                city.CityName = cityViewModel.CityName;
+                city.CountryId = cityViewModel.CountryId;
+                _context.SaveChanges();
+            }
+
             return RedirectToAction("Index");
         }
 

@@ -284,3 +284,11 @@ D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debu
 D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\tempBin\Debug\net6.0\Old_bin\Debug\net6.0\First_MVC_App.runtimeconfig.json
 D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\tempBin\Debug\net6.0\Old_bin\Debug\net6.0\First_MVC_App.staticwebassets.runtime.json
 D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\tempBin\Debug\net6.0\Old_bin\Debug\net6.0\libman.json
+D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
+D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.dll
+D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\obj\Debug\net6.0\First_MVC_App.MvcApplicationPartsAssemblyInfo.cs

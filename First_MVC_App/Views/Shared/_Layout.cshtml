@@ -24,6 +24,7 @@
                 <li><a asp-controller="City" asp-action="Index">City</a></li>
                 <li><a asp-controller="Language" asp-action="Index">Language</a></li>
             </ul>
+            <partial name="_LoginPartial" />
         </nav>
     </header>
 
@@ -36,5 +37,6 @@
             &copy; @DateTime.Now.ToString("yyyy-MM-dd") Oskar Ferens
         </p>
     </footer>
+    @await RenderSectionAsync("Scripts", required:false)
 </body>
 </html>

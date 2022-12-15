@@ -1,5 +1,7 @@
 using First_MVC_App.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using First_MVC_App.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,11 +18,19 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
+    .AddRoles<IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>();
+
 var app = builder.Build();
 
 app.UseStaticFiles();
 app.UseRouting();
 app.UseSession();
+
+app.UseAuthentication();
+app.UseAuthentication();
+app.MapRazorPages();
 
 app.MapControllerRoute(
     name: "doctor",
