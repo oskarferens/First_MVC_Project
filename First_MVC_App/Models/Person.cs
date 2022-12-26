@@ -1,5 +1,4 @@
-﻿using MessagePack;
-using System.Reflection;
+﻿ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace First_MVC_App.Models
 {
@@ -9,6 +8,8 @@ namespace First_MVC_App.Models
         {
 
         }
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string Name { get; set; }
         public string PhoneNumber { get; set; }
