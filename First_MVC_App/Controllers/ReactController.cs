@@ -25,35 +25,35 @@ namespace First_MVC_App.Controllers
         }
 
 
-        [HttpPost("create")]
-        public IActionResult Create(JsonObject person)
-        {
-            string jsonPerson = person.ToString();
-            Person personToCreate = JsonConvert.DeserializeObject<Person>(jsonPerson);
+        //[HttpPost("create")]
+        //public IActionResult Create(JsonObject person)
+        //{
+        //    string jsonPerson = person.ToString();
+        //    Person personToCreate = JsonConvert.DeserializeObject<Person>(jsonPerson);
 
-            if (personToCreate != null)
-            {
-                _context.PeopleList.Add(personToCreate);
-                _context.SaveChanges();
+        //    if (personToCreate != null)
+        //    {
+        //        _context.PeopleList.Add(personToCreate);
+        //        _context.SaveChanges();
 
-                return StatusCode(200);
-            }
-            return StatusCode(404);
-        }
+        //        return StatusCode(200);
+        //    }
+        //    return StatusCode(404);
+        //}
 
 
-        [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
-        {
-            var person = _context.PeopleList.Find(id);
-            if (person != null)
-            {
-                _context.PeopleList.Remove(person);
-                _context.SaveChanges();
+        //[HttpDelete("{id}")]
+        //public IActionResult Delete(int id)
+        //{
+        //    var person = _context.PeopleList.Find(id);
+        //    if (person != null)
+        //    {
+        //        _context.PeopleList.Remove(person);
+        //        _context.SaveChanges();
 
-                return StatusCode(200);
-            }
-            return StatusCode(404);
-        }
+        //        return StatusCode(200);
+        //    }
+        //    return StatusCode(404);
+        //}
     }
 }

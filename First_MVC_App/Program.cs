@@ -31,14 +31,14 @@ builder.Services.AddCors(p => p.AddPolicy("corsPolicy", builder =>
 
 var app = builder.Build();
 
+app.UseSession();
 app.UseStaticFiles();
 app.UseRouting();
-app.UseSession();
 
-app.UseAuthorization();
+
 app.UseCors("corsPolicy");
 app.UseAuthentication();
-app.UseAuthentication();
+app.UseAuthorization();
 app.MapRazorPages();
 
 app.MapControllerRoute(
