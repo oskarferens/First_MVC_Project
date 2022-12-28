@@ -24,6 +24,21 @@ namespace First_MVC_App.Controllers
             return people;
         }
 
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            var person = _context.PeopleList.Find(id);
+
+            if (person != null)
+            {
+                _context.PeopleList.Remove(person);
+                _context.SaveChanges();
+
+                return StatusCode(200);
+            }
+            return StatusCode(404);
+        }
+
 
         //[HttpPost("create")]
         //public IActionResult Create(JsonObject person)
@@ -42,18 +57,6 @@ namespace First_MVC_App.Controllers
         //}
 
 
-        //[HttpDelete("{id}")]
-        //public IActionResult Delete(int id)
-        //{
-        //    var person = _context.PeopleList.Find(id);
-        //    if (person != null)
-        //    {
-        //        _context.PeopleList.Remove(person);
-        //        _context.SaveChanges();
 
-        //        return StatusCode(200);
-        //    }
-        //    return StatusCode(404);
-        //}
     }
 }
