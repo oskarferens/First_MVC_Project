@@ -19,14 +19,13 @@ namespace First_MVC_App.Controllers
             _context = context;
         }
 
-
         public IActionResult Index()
         {
             {
                 return View(_context.CityList.ToList()); 
             }
         }
-            //return View("CityIndex", cityViewModel);
+
         public IActionResult Create()
         {
             ViewBag.Country = new SelectList(_context.CountryList, "CountryId", "CountryName");
@@ -46,6 +45,7 @@ namespace First_MVC_App.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpPost]
         public IActionResult EditPage(int id)
         {
             City city = _context.CityList.Find(id);

@@ -39,24 +39,46 @@ namespace First_MVC_App.Controllers
             return StatusCode(404);
         }
 
+        [HttpPost("create")]
+        public IActionResult Create(JsonObject personJson)
+        {
+            string jsonPerson = personJson.ToString();
 
-        //[HttpPost("create")]
-        //public IActionResult Create(JsonObject person)
-        //{
-        //    string jsonPerson = person.ToString();
-        //    Person personToCreate = JsonConvert.DeserializeObject<Person>(jsonPerson);
+            PersonReact personToCreate = JsonConvert.DeserializeObject<PersonReact>(jsonPerson);
 
-        //    if (personToCreate != null)
-        //    {
-        //        _context.PeopleList.Add(personToCreate);
-        //        _context.SaveChanges();
+            if (personToCreate != null)
+            {
+                _context.PeopleList.Add(new Person { Name = personToCreate.Name, PhoneNumber = personToCreate.PhoneNumber, CityId = personToCreate.City });
+                _context.SaveChanges();
 
-        //        return StatusCode(200);
-        //    }
-        //    return StatusCode(404);
-        //}
+                return StatusCode(200);
+            }
+            return StatusCode(404);
+        }
 
+        [HttpGet("countries")]
+        public List<Country> GetCountry()
+        {
+            List<Country> country = new List<Country>();
+            country = _context.CountryList.ToList();
+            return country;
+        }
 
+        [HttpGet("cities")]
+        public List<City> GetCity()
+        {
+            List<City> city = new List<City>();
+            city = _context.CityList.ToList();
+            return city;
+        }
+
+        [HttpGet("languages")]
+        public List<Language> GetLanguage()
+        {
+            List<Language> language = new List<Language>();
+            language = _context.LanguageList.ToList();
+            return language;
+        }
 
     }
 }

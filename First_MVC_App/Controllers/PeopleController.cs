@@ -17,6 +17,7 @@ namespace First_MVC_App.Controllers
         {
             _context = context;
         }
+
         public IActionResult Index()
         {
             var people = _context.PeopleList.Include(x => x.City).Include(y => y.LanguageList).ToList();
@@ -71,16 +72,11 @@ namespace First_MVC_App.Controllers
                 return View("PeopleList", vm);
             }
 
-            //ViewBag.Message = $"Showing {peopleViewModel.PeopleList.Count} result(s).";
-
             return RedirectToAction("PeopleList");
         }
 
         public IActionResult SortPeople(PeopleViewModel peopleViewModel)
         {
-            //var people = createPersonViewModel.GetPeopleList();
-            //people.Sort((x, y) => string.Compare(x.Name, y.Name));
-
             return RedirectToAction("PeopleList", peopleViewModel);
         }
     }

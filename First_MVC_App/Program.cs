@@ -24,7 +24,9 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.R
 
 builder.Services.AddCors(p => p.AddPolicy("corsPolicy", builder =>
 {
-    builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
+    builder.WithOrigins("*")
+    .AllowAnyMethod()
+    .AllowAnyHeader();
 }));
 
 var app = builder.Build();
@@ -32,7 +34,6 @@ var app = builder.Build();
 app.UseSession();
 app.UseStaticFiles();
 app.UseRouting();
-
 
 app.UseCors("corsPolicy");
 app.UseAuthentication();
