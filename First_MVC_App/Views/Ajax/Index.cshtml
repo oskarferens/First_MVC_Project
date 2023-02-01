@@ -1,0 +1,47 @@
+﻿@model PeopleViewModel
+@{
+    ViewData["Title"] = "Title";
+}
+
+<div class="ajax">
+    <button onclick="getPeople()" class="btn btn-dark">Show People</button>
+</div>
+
+<div id="details-for-person"></div>
+<div id="show-getPeople-section"></div>
+
+<script>
+
+    function getPeople() {
+        $.ajax({
+            type: "POST",
+            url: "Ajax/GetPeople",
+            success: function(response) {
+                $("#show-getPeople-section").html(response)
+            }
+        })
+    }
+    function deletePerson() {
+        var id = $("#person-id").val();
+
+        $.ajax({
+            type: "POST",
+            url: "Ajax/DeletePerson?id=" + id,
+            success: function(response) {
+                $("#details-for-person").html("")
+                $("#show-getPeople-section").html(response);
+            }
+        })
+    }
+    function showPersonDetail() {
+        var id = $("#person-id").val();
+
+        $.ajax({
+            type: "POST",
+            url: "Ajax/ShowPersonDetail?id=" + id,
+            success: function (response) {
+                $("#details-for-person").html(response);
+            }
+        })
+    }
+</script>

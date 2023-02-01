@@ -32,5 +32,10 @@ namespace First_MVC_App.ViewModels
         [Display(Name = "Language")]
         [Required]
         public string Language { get; set; }
-    }
+
+		public static void SeedPeople()
+		{
+			PeopleList.Add(new Person(5, "Roman", "435678432", 3));
+		}
+	}
 }
