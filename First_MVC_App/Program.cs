@@ -55,8 +55,8 @@ app.MapControllerRoute(
     pattern: "ajax");
 
 app.MapControllerRoute(
-    name: "persons",
-    pattern: "persons");
+    name: "person",
+    pattern: "person");
 
 app.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=About}/{id?}");
 

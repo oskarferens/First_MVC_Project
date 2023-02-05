@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <link rel="stylesheet" href="~/lib\css\bootstrap.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==
+" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
 </head>
 <body>
     <div class="logotype">
@@ -23,9 +25,10 @@
                 <li><a asp-controller="Country" asp-action="Index">Country</a></li>
                 <li><a asp-controller="City" asp-action="Index">City</a></li>
                 <li><a asp-controller="Language" asp-action="Index">Language</a></li>
+                <li><a asp-controller="Ajax" asp-action="Index">Ajax</a></li>
             </ul>
             <partial name="_LoginPartial" />
-        </nav>
+        </nav>Language
     </header>
 
     <div class="container-fluid">

@@ -6,14 +6,13 @@ namespace First_MVC_App.Controllers
 {
 	public class AjaxController : Controller
 	{
-
 		public static PeopleViewModel pvm = new PeopleViewModel();
 		public IActionResult Index()
 		{
 			return View();
 		}
 
-		public IActionResult FindAll()
+        public IActionResult FindAll()
 		{
 			if (PeopleViewModel.PeopleList.Count == 0)
 			{
@@ -21,7 +20,7 @@ namespace First_MVC_App.Controllers
 			}
 
 			pvm.tempList = PeopleViewModel.PeopleList;
-			return PartialView("_AjaxPeopleListPartial", pvm);
+			return PartialView("_AjaxPersonListPartial", pvm);
 		}
 
         [HttpPost]
@@ -49,8 +48,5 @@ namespace First_MVC_App.Controllers
 
             return PartialView("_AjaxPersonDetails", person);
         }
-
-
-
     }
 }

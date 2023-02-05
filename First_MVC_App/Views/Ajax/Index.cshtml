@@ -15,25 +15,25 @@
     function getPeople() {
         $.ajax({
             type: "POST",
-            url: "Ajax/GetPeople",
+            url: "Ajax/FindAll",
             success: function(response) {
-                $("#show-getPeople-section").html(response)
+                $("#show-FindAll-section").html(response)
             }
         })
     }
-    function deletePerson() {
+    function delete() {
         var id = $("#person-id").val();
 
         $.ajax({
             type: "POST",
-            url: "Ajax/DeletePerson?id=" + id,
+            url: "Ajax/Delete?id=" + id,
             success: function(response) {
                 $("#details-for-person").html("")
-                $("#show-getPeople-section").html(response);
+                $("#show-FindAll-section").html(response);
             }
         })
     }
-    function showPersonDetail() {
+    function getInfo() {
         var id = $("#person-id").val();
 
         $.ajax({
