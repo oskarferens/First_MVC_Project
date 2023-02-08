@@ -4,27 +4,27 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace First_MVC_App.Controllers
 {
-	public class AjaxController : Controller
-	{
-		public static PeopleViewModel pvm = new PeopleViewModel();
-		public IActionResult Index()
-		{
-			return View();
-		}
+    public class AjaxController : Controller
+    {
+        public static PeopleViewModel pvm = new PeopleViewModel();
+        public IActionResult Index()
+        {
+            return View();
+        }
 
-        public IActionResult FindAll()
-		{
-			if (PeopleViewModel.PeopleList.Count == 0)
-			{
-				PeopleViewModel.SeedPeople();
-			}
+        public IActionResult GetPeople()
+        {
+            if (PeopleViewModel.PeopleList.Count == 0)
+            {
+                PeopleViewModel.SeedPeople();
+            }
 
-			pvm.tempList = PeopleViewModel.PeopleList;
-			return PartialView("_AjaxPersonListPartial", pvm);
-		}
+            pvm.tempList = PeopleViewModel.PeopleList;
+            return PartialView("_AjaxPersonListPartial", pvm);
+        }
 
         [HttpPost]
-        public IActionResult Delete(int id)
+        public IActionResult DeletePerson(int id)
         {
             var personToDelete = PeopleViewModel.PeopleList.FirstOrDefault(p => p.Id == id);
 
@@ -32,7 +32,6 @@ namespace First_MVC_App.Controllers
             {
                 PeopleViewModel.PeopleList.Remove(personToDelete);
             }
-
             return RedirectToAction("GetPeople");
         }
 

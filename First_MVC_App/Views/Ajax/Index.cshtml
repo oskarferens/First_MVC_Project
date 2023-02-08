@@ -14,26 +14,28 @@
 
     function getPeople() {
         $.ajax({
-            type: "POST",
-            url: "Ajax/FindAll",
-            success: function(response) {
-                $("#show-FindAll-section").html(response)
+            type: "GET",
+            url: "GetPeople",
+            success: function (response) {
+                $("#show-getPeople-section").html(response)
             }
         })
     }
-    function delete() {
+
+    function deletePerson() {
         var id = $("#person-id").val();
 
         $.ajax({
             type: "POST",
-            url: "Ajax/Delete?id=" + id,
-            success: function(response) {
+            url: "DeletePerson?id=" + id,
+            success: function (response) {
                 $("#details-for-person").html("")
-                $("#show-FindAll-section").html(response);
+                $("#show-getPeople-section").html(response);
             }
         })
     }
-    function getInfo() {
+
+    function showPersonDetail() {
         var id = $("#person-id").val();
 
         $.ajax({
