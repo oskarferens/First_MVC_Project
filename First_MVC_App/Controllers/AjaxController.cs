@@ -1,6 +1,7 @@
 ﻿using First_MVC_App.Models;
 using First_MVC_App.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace First_MVC_App.Controllers
 {
@@ -38,14 +39,14 @@ namespace First_MVC_App.Controllers
         [HttpPost]
         public IActionResult GetInfo(int id)
         {
-            Person? person = PeopleViewModel.PeopleList.FirstOrDefault(p => p.Id == id);
+            var personDetails = PeopleViewModel.PeopleList.FirstOrDefault(p => p.Id == id);
 
-            if (person == null)
+            if (personDetails == null)
             {
                 ViewBag.ERROR = "Person not found";
             }
 
-            return PartialView("_AjaxPersonDetails", person);
+            return PartialView("_AjaxPersonDetails", pvm);
         }
     }
 }

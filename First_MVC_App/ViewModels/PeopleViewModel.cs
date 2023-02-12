@@ -33,9 +33,14 @@ namespace First_MVC_App.ViewModels
         [Required]
         public string Language { get; set; }
 
-		public static void SeedPeople()
-		{
-			PeopleList.Add(new Person(5, "Roman", "435678432", 3));
-		}
-	}
+        public static void SeedPeople()
+        {
+            PeopleList.Add(new Person(4, "Roman", "435678432", 3));
+            PeopleList.Add(new Person(5, "Mike", "345634567", 2));
+            PeopleList.Add(new Person(6, "Kevin", "234562356", 2));
+            PeopleList.Add(new Person(7, "Mikael", "24568821", 1));
+            PeopleList.Add(new Person(8, "Niklas", "7845625", 1));
+            PeopleList.Add(new Person(9, "Oskar", "123451345", 1));
+        }
+    }
 }

@@ -1,4 +1,4 @@
-﻿@model Person
+﻿@model PersonDetails
 
 @if (Model == null)
 {
@@ -19,7 +19,7 @@ else
         <div class="row">
             <div class="col"><span>@Model.Name</span></div>
             <div class="col"><span>@Model.PhoneNumber</span></div>
-            <div class="col"><span>@Model.City</span></div>
+            <div class="col"><span>@Model.CityName</span></div>
         </div>
     </div>
 }
