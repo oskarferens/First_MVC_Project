@@ -46,7 +46,7 @@ namespace First_MVC_App.Controllers
                 ViewBag.ERROR = "Person not found";
             }
 
-            return PartialView("_AjaxPersonDetails", pvm);
+            return PartialView("_AjaxPersonDetails", personDetails);
         }
     }
 }
