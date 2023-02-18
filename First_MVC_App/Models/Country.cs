@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace First_MVC_App.Models
 {
@@ -8,8 +6,9 @@ namespace First_MVC_App.Models
     {
         [Key]
         public int CountryId { get; set; }
-        public string CountryName { get; set; }
-        public List<City> CityList { get; set; } = new();
 
+        public string CountryName { get; set; }
+
+        public List<City> Cities { get; set; } = new List<City>();
     }
 }

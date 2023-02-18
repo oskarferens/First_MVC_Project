@@ -1,45 +1,56 @@
 ﻿<!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
-    <link rel="stylesheet" href="~/lib\css\bootstrap.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==
-" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PEOPLE MVC REACT</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/First_MVC_App.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <div class="logotype">
-        <h1>Lorem Ipsum</h1>
-    </div>
-
     <header>
-        <nav>
-            <ul>
-                <li><a asp-controller="Home" asp-action="About">About</a></li>
-                <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
-                <li><a asp-controller="Home" asp-action="Projects">Project</a></li>
-                <li><a asp-controller="Doctor" asp-action="FeverCheck">Doctor</a></li>
-                <li><a asp-controller="GuessingGame" asp-action="GuessingGame">GuessingGame</a></li>
-                <li><a asp-controller="People" asp-action="Index">People</a></li>
-                <li><a asp-controller="Country" asp-action="Index">Country</a></li>
-                <li><a asp-controller="City" asp-action="Index">City</a></li>
-                <li><a asp-controller="Language" asp-action="Index">Language</a></li>
-                <li><a asp-controller="Ajax" asp-action="Index">Ajax</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">PEOPLE MVC REACT</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">People</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="City" asp-action="Index">Cities</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Country" asp-action="Index">Countries</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Language" asp-action="Index">Language</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <partial name="_LoginPartial" />
-        </nav>Language
+        </nav>
     </header>
-
-    <div class="container-fluid">
-        @RenderBody()
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
     </div>
 
-    <footer class="container-fluid">
-        <p>
-            &copy; @DateTime.Now.ToString("yyyy-MM-dd") Oskar Ferens
-        </p>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - First_MVC_App - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
     </footer>
-    @await RenderSectionAsync("Scripts", required:false)
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

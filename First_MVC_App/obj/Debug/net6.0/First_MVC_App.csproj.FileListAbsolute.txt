@@ -292,3 +292,5 @@ D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debu
 D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
 D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.dll
 D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\obj\Debug\net6.0\First_MVC_App.MvcApplicationPartsAssemblyInfo.cs
+D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\Visual Studio projects\First_MVC_Project\First_MVC_App\First_MVC_App\obj\Debug\net6.0\scopedcss\projectbundle\First_MVC_App.bundle.scp.css

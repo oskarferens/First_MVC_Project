@@ -1,6 +1,14 @@
 {
   "Files": [
     {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\First_MVC_App.bundle.scp.css",
+      "PackagePath": "staticwebassets\\First_MVC_App.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
       "Id": "D:\\Visual Studio projects\\First_MVC_Project\\First_MVC_App\\First_MVC_App\\wwwroot\\lib\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\css\\bootstrap-grid.css"
     },

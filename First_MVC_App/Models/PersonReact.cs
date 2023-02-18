@@ -6,5 +6,6 @@
         public string PhoneNumber { get; set; }
         public int City { get; set; }
         public int Country { get; set; }
+
     }
 }

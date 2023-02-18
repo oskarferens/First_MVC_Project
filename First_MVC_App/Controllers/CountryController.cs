@@ -1,58 +1,76 @@
 ﻿using First_MVC_App.Data;
 using First_MVC_App.Models;
 using First_MVC_App.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using System;
- 
+using System.Data;
+
 namespace First_MVC_App.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class CountryController : Controller
     {
-        public static CountryViewModel countryViewModel { get; set; } = new CountryViewModel();
-
         readonly ApplicationDbContext _context;
-        static private int _indexer;
-        public CountryController (ApplicationDbContext context)
+
+        public CountryController(ApplicationDbContext context)
         {
             _context = context;
         }
+
         public IActionResult Index()
         {
-            if (CountryViewModel.CountryList.Count() == 0)
-            {
-                _indexer = CountryViewModel.CountryList.Count();
-                countryViewModel.TempList = _context.CountryList.Include(x => x.CityList).ToList();
-            }
-            return View(_context.CountryList.ToList());
-        }
+            CountryViewModel countryViewModel = new CountryViewModel();
+            countryViewModel.countries = _context.Countries.ToList();
 
-        public IActionResult Create()
-        {
-                 return View();
+            return View(countryViewModel);
         }
 
         [HttpPost]
-        public IActionResult Create(Country country)
+        public IActionResult Create(CountryViewModel countryViewModel)
         {
-            ModelState.Remove("Id");
+
             if (ModelState.IsValid)
             {
-                _context.CountryList.Add(country);
+                Country country = new Country() { CountryName = countryViewModel.CountryName };
+                _context.Countries.Add(country);
                 _context.SaveChanges();
             }
+
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult EditPage(int id)
+        {
+            Country country = _context.Countries.Find(id);
+            CountryViewModel countryViewModel = new CountryViewModel();
+
+            countryViewModel.CountryId = id;
+            countryViewModel.CountryName = country.CountryName;
+
+            return View(countryViewModel);
+        }
+
+        [HttpPost]
+        public IActionResult EditCountry(CountryViewModel countryViewModel)
+        {
+            Country country = _context.Countries.Find(countryViewModel.CountryId);
+
+            if (ModelState.IsValid)
+            {
+                country.CountryName = countryViewModel.CountryName;
+                _context.SaveChanges();
+            }
+
             return RedirectToAction("Index");
         }
 
         public IActionResult Delete(int id)
         {
-            var countryToRemove = _context.CountryList.Find(id);
-            if (countryToRemove != null)
-            {
-                _context.CountryList.Remove(countryToRemove);
-                _context.SaveChanges();
-            }
+            Country country = _context.Countries.Find(id);
+            _context.Countries.Remove(country);
+            _context.SaveChanges();
             return RedirectToAction("Index");
         }
     }

@@ -1,17 +1,17 @@
 ﻿using First_MVC_App.Data;
 using First_MVC_App.Models;
 using First_MVC_App.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace First_MVC_App.Controllers
 {
     [Authorize(Roles = "Admin")]
     public class CityController : Controller
     {
-        public static CityViewModel cityViewModel { get; set; } = new CityViewModel();
-
         private readonly ApplicationDbContext _context;
 
         public CityController(ApplicationDbContext context)
@@ -21,41 +21,39 @@ namespace First_MVC_App.Controllers
 
         public IActionResult Index()
         {
-            {
-                return View(_context.CityList.ToList()); 
-            }
-        }
+            CityViewModel cityViewModel = new CityViewModel();
+            cityViewModel.countries = _context.Cities.Include(x => x.Country).ToList();
 
-        public IActionResult Create()
-        {
-            ViewBag.Country = new SelectList(_context.CountryList, "CountryId", "CountryName");
 
-            return View();
+            ViewBag.Countries = new SelectList(_context.Countries, "CountryId", "CountryName");
+
+            return View(cityViewModel);
         }
 
         [HttpPost]
-        public IActionResult Create(City city)
+        public IActionResult Create(CityViewModel cityViewModel)
         {
 
             if (ModelState.IsValid)
             {
-                _context.CityList.Add(city);
+                City city = new City() { CityName = cityViewModel.Name, CountryId = cityViewModel.CountryId };
+                _context.Cities.Add(city);
                 _context.SaveChanges();
             }
+
             return RedirectToAction("Index");
         }
 
-        [HttpPost]
         public IActionResult EditPage(int id)
         {
-            City city = _context.CityList.Find(id);
+            City city = _context.Cities.Find(id);
             CityViewModel cityViewModel = new CityViewModel();
 
-            cityViewModel.CityName = city.CityName;
+            cityViewModel.Name = city.CityName;
             cityViewModel.CityId = id;
             cityViewModel.CountryId = city.CountryId;
 
-            ViewBag.Countries = new SelectList(_context.CountryList, "CountryId", "CountryName");
+            ViewBag.Countries = new SelectList(_context.Countries, "CountryId", "CountryName");
 
             return View(cityViewModel);
         }
@@ -63,11 +61,11 @@ namespace First_MVC_App.Controllers
         [HttpPost]
         public IActionResult EditCity(CityViewModel cityViewModel)
         {
-            City city = _context.CityList.Find(cityViewModel.CityId);
+            City city = _context.Cities.Find(cityViewModel.CityId);
 
             if (ModelState.IsValid)
             {
-                city.CityName = cityViewModel.CityName;
+                city.CityName = cityViewModel.Name;
                 city.CountryId = cityViewModel.CountryId;
                 _context.SaveChanges();
             }
@@ -75,14 +73,11 @@ namespace First_MVC_App.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult Delete(int CityId)
+        public IActionResult Delete(int id)
         {
-            var cityToRemove = _context.CityList.FirstOrDefault(x => x.CityId == CityId);
-            if (cityToRemove != null)
-            {
-                _context.CityList.Remove(cityToRemove);
-                _context.SaveChanges();
-            }
+            City city = _context.Cities.Find(id);
+            _context.Cities.Remove(city);
+            _context.SaveChanges();
             return RedirectToAction("Index");
         }
     }

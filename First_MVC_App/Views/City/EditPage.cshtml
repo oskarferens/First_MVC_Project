@@ -1,0 +1,14 @@
+﻿@model CityViewModel
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+
+<form asp-action="EditCity" method="post">
+    <input type="text" name="Name" placeholder="Name" value="@Model.Name">
+    <select asp-for="CountryId" id="selectlist" name="CountryId" asp-items="@ViewBag.Countries"></select>
+    <input type="hidden" name="CityId" value="@Model.CityId">
+    <input type="submit" value="Add" class="btn btn-primary">
+</form>
+

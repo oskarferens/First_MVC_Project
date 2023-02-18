@@ -1,29 +1,62 @@
-﻿@model IEnumerable<Language>
+﻿@model PeopleViewModel
+
 @{
-    ViewData["Title"] = "LanguageIndex";
+    ViewData["Title"] = "Languages";
 }
 
-<h1>List of languages </h1>
+@if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+{
+    <div class="text-center">
+        <form asp-action="AddLanguage" method="post">
+            <input type="text" name="LanguageName" placeholder="Language name">
+            <input type="submit" value="Add language" class="btn btn-primary">
+        </form>
+    </div>
+}
 
-<div><a asp-action="Create" class="btn btn-primary">Add new language to list </a></div>
+
 
 <table class="table">
     <thead>
         <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th></th>
+            <th>
+                Name
+            </th>
+            <th>
+                Languages
+            </th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var language in Model)
+        @foreach (var item in Model.people)
         {
             <tr>
-                <td>@language.LanguageId</td>
-                <td>@language.Name</td>
-                <td><a asp-action="Delete" asp-route-LanguageId=@language.LanguageId class="btn btn-danger">Delete</a></td>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    <ul>
+                        @foreach (var language in item.Languages)
+                        {
+                            <li>
+                                @language.LanguageName
+                            </li>
+                        }
+                    </ul>
+                </td>
             </tr>
         }
     </tbody>
 </table>
 
+
+@if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+{
+    <div class="text-center">
+        <form asp-action="AddLanguageToPerson" method="post">
+            <select id="selectlist2" name="PersonId" asp-items="@ViewBag.People"></select>
+            <select id="selectlist" name="LanguageId" asp-items="@ViewBag.Languages"></select>
+            <input type="submit" value="Add language" class="btn btn-primary">
+        </form>
+    </div>
+}

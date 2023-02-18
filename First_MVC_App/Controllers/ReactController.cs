@@ -2,6 +2,7 @@
 using First_MVC_App.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using System.Text.Json.Nodes;
 
@@ -11,32 +12,41 @@ namespace First_MVC_App.Controllers
     [ApiController]
     public class ReactController : ControllerBase
     {
+
         readonly ApplicationDbContext _context;
-        public ReactController(ApplicationDbContext context) {
+
+        public ReactController(ApplicationDbContext context)
+        {
             _context = context;
         }
 
         [HttpGet]
-        public List<Person> GetPeople() 
+        public List<Person> GetPeople()
         {
-            List<Person> people = new List<Person>();
-            people = _context.PeopleList.ToList();
-            return people;
+            return _context.People.Include(x => x.City).Include(y => y.City.Country).ToList(); ;
+        }
+
+        [HttpGet("cities/{id}")]
+        public List<City> GetCities(int id)
+        {
+            return _context.Cities.Where(x => x.CountryId == id).ToList();
+        }
+
+        [HttpGet("countries")]
+        public List<Country> GetCountries()
+        {
+            return _context.Countries.Include(y => y.Cities).ToList();
         }
 
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var person = _context.PeopleList.Find(id);
+            Person person = _context.People.Find(id);
+            if (person == null) return StatusCode(404);
 
-            if (person != null)
-            {
-                _context.PeopleList.Remove(person);
-                _context.SaveChanges();
-
-                return StatusCode(200);
-            }
-            return StatusCode(404);
+            _context.People.Remove(person);
+            _context.SaveChanges();
+            return StatusCode(200);
         }
 
         [HttpPost("create")]
@@ -48,37 +58,14 @@ namespace First_MVC_App.Controllers
 
             if (personToCreate != null)
             {
-                _context.PeopleList.Add(new Person { Name = personToCreate.Name, PhoneNumber = personToCreate.PhoneNumber, CityId = personToCreate.City });
+                _context.People.Add(new Person { Name = personToCreate.Name, PhoneNumber = personToCreate.PhoneNumber, CityId = personToCreate.City });
                 _context.SaveChanges();
 
                 return StatusCode(200);
             }
             return StatusCode(404);
-        }
 
-        [HttpGet("countries")]
-        public List<Country> GetCountry()
-        {
-            List<Country> country = new List<Country>();
-            country = _context.CountryList.ToList();
-            return country;
-        }
 
-        [HttpGet("cities")]
-        public List<City> GetCity()
-        {
-            List<City> city = new List<City>();
-            city = _context.CityList.ToList();
-            return city;
         }
-
-        [HttpGet("languages")]
-        public List<Language> GetLanguage()
-        {
-            List<Language> language = new List<Language>();
-            language = _context.LanguageList.ToList();
-            return language;
-        }
-
     }
 }

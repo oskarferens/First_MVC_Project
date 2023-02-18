@@ -104,21 +104,21 @@ namespace First_MVC_App.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "a282bab9-7993-43c8-932f-10014e91466a",
+                            Id = "83864392-bfd8-4f36-830a-a61445f88f56",
                             AccessFailedCount = 0,
-                            BirthDate = "1995-01-01",
+                            BirthDate = "2000-01-01",
                             CheckAdmin = false,
-                            ConcurrencyStamp = "ee780d6b-8a95-49dc-8707-b8bb57ce1ac2",
+                            ConcurrencyStamp = "1337ce39-be53-46cb-aeff-6af24ddd32a8",
                             Email = "admin@admin.com",
                             EmailConfirmed = false,
-                            FirstName = "Mark",
-                            LastName = "SockerBerg",
+                            FirstName = "Admin",
+                            LastName = "Adminsson",
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@ADMIN.COM",
                             NormalizedUserName = "ADMIN@ADMIN.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEPcCtYsQ+RN0Serpo0dT4P18H4ABQJFNDuympt8ZsOzGW71JsrESX5eXueL/f2k3Vw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEDgm0AiDcTTsFwTrft/DIMgqUtKKCIOW5B7tVMBuVLDPJYkfG2ZQautxWFDLu5dzBw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "8ba1b4e8-71fd-470b-9481-6e78a38cfbf8",
+                            SecurityStamp = "bcd83491-b6cc-495f-aabf-9a2109dd1b65",
                             TwoFactorEnabled = false,
                             UserName = "admin@admin.com"
                         });
@@ -143,25 +143,37 @@ namespace First_MVC_App.Migrations
 
                     b.HasIndex("CountryId");
 
-                    b.ToTable("CityList");
+                    b.ToTable("Cities");
 
                     b.HasData(
                         new
                         {
                             CityId = 1,
-                            CityName = "Stockholm",
+                            CityName = "Göteborg",
                             CountryId = 1
                         },
                         new
                         {
                             CityId = 2,
-                            CityName = "Los Angeles",
-                            CountryId = 2
+                            CityName = "Stockholm",
+                            CountryId = 1
                         },
                         new
                         {
                             CityId = 3,
-                            CityName = "Berlin",
+                            CityName = "Malmö",
+                            CountryId = 1
+                        },
+                        new
+                        {
+                            CityId = 4,
+                            CityName = "Helsinki",
+                            CountryId = 2
+                        },
+                        new
+                        {
+                            CityId = 5,
+                            CityName = "Copenhagen",
                             CountryId = 3
                         });
                 });
@@ -180,7 +192,7 @@ namespace First_MVC_App.Migrations
 
                     b.HasKey("CountryId");
 
-                    b.ToTable("CountryList");
+                    b.ToTable("Countries");
 
                     b.HasData(
                         new
@@ -191,12 +203,22 @@ namespace First_MVC_App.Migrations
                         new
                         {
                             CountryId = 2,
-                            CountryName = "USA"
+                            CountryName = "Finland"
                         },
                         new
                         {
                             CountryId = 3,
-                            CountryName = "Germany"
+                            CountryName = "Denmark"
+                        },
+                        new
+                        {
+                            CountryId = 4,
+                            CountryName = "Norway"
+                        },
+                        new
+                        {
+                            CountryId = 5,
+                            CountryName = "Iceland"
                         });
                 });
 
@@ -208,48 +230,51 @@ namespace First_MVC_App.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("LanguageId"), 1L, 1);
 
-                    b.Property<string>("Name")
+                    b.Property<string>("LanguageName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("LanguageId");
 
-                    b.ToTable("LanguageList");
+                    b.ToTable("Languages");
 
                     b.HasData(
                         new
                         {
                             LanguageId = 1,
-                            Name = "Swedish"
+                            LanguageName = "Swedish"
                         },
                         new
                         {
                             LanguageId = 2,
-                            Name = "English"
+                            LanguageName = "English"
                         },
                         new
                         {
                             LanguageId = 3,
-                            Name = "Polish"
+                            LanguageName = "Norwegian"
                         },
                         new
                         {
                             LanguageId = 4,
-                            Name = "Tagalog"
+                            LanguageName = "Danish"
+                        },
+                        new
+                        {
+                            LanguageId = 5,
+                            LanguageName = "Finnish"
                         });
                 });
 
             modelBuilder.Entity("First_MVC_App.Models.Person", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("PersonId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PersonId"), 1L, 1);
 
                     b.Property<int>("CityId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("LanguageId")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
@@ -260,88 +285,109 @@ namespace First_MVC_App.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("PersonId");
 
                     b.HasIndex("CityId");
 
-                    b.ToTable("PeopleList");
+                    b.ToTable("People");
 
                     b.HasData(
                         new
                         {
-                            Id = 1,
+                            PersonId = 1,
                             CityId = 1,
-                            LanguageId = 0,
-                            Name = "Oskar F",
-                            PhoneNumber = "031 123 345"
+                            Name = "Mark Twain",
+                            PhoneNumber = "234562356"
                         },
                         new
                         {
-                            Id = 2,
+                            PersonId = 2,
                             CityId = 2,
-                            LanguageId = 0,
-                            Name = "Ronnie C",
-                            PhoneNumber = "0976 123 321"
+                            Name = "Daniel Tomsson",
+                            PhoneNumber = "235623562345"
                         },
                         new
                         {
-                            Id = 3,
+                            PersonId = 3,
                             CityId = 3,
-                            LanguageId = 0,
-                            Name = "Niklas A",
-                            PhoneNumber = "846 346 836"
+                            Name = "Niklas Björk",
+                            PhoneNumber = "0733456023"
+                        },
+                        new
+                        {
+                            PersonId = 4,
+                            CityId = 4,
+                            Name = "Andrea Lind",
+                            PhoneNumber = "3245624566"
+                        },
+                        new
+                        {
+                            PersonId = 5,
+                            CityId = 5,
+                            Name = "Kelly Rowland",
+                            PhoneNumber = "78567856785"
                         });
                 });
 
             modelBuilder.Entity("LanguagePerson", b =>
                 {
-                    b.Property<int>("LanguageListLanguageId")
+                    b.Property<int>("LanguagesLanguageId")
                         .HasColumnType("int");
 
-                    b.Property<int>("PeopleListId")
+                    b.Property<int>("PeoplePersonId")
                         .HasColumnType("int");
 
-                    b.HasKey("LanguageListLanguageId", "PeopleListId");
+                    b.HasKey("LanguagesLanguageId", "PeoplePersonId");
 
-                    b.HasIndex("PeopleListId");
+                    b.HasIndex("PeoplePersonId");
 
                     b.ToTable("LanguagePerson");
 
                     b.HasData(
                         new
                         {
-                            LanguageListLanguageId = 1,
-                            PeopleListId = 1
+                            LanguagesLanguageId = 1,
+                            PeoplePersonId = 1
                         },
                         new
                         {
-                            LanguageListLanguageId = 4,
-                            PeopleListId = 1
+                            LanguagesLanguageId = 2,
+                            PeoplePersonId = 1
                         },
                         new
                         {
-                            LanguageListLanguageId = 3,
-                            PeopleListId = 1
+                            LanguagesLanguageId = 1,
+                            PeoplePersonId = 2
                         },
                         new
                         {
-                            LanguageListLanguageId = 2,
-                            PeopleListId = 2
+                            LanguagesLanguageId = 3,
+                            PeoplePersonId = 2
                         },
                         new
                         {
-                            LanguageListLanguageId = 3,
-                            PeopleListId = 2
+                            LanguagesLanguageId = 1,
+                            PeoplePersonId = 3
                         },
                         new
                         {
-                            LanguageListLanguageId = 1,
-                            PeopleListId = 3
+                            LanguagesLanguageId = 4,
+                            PeoplePersonId = 4
                         },
                         new
                         {
-                            LanguageListLanguageId = 2,
-                            PeopleListId = 3
+                            LanguagesLanguageId = 2,
+                            PeoplePersonId = 4
+                        },
+                        new
+                        {
+                            LanguagesLanguageId = 1,
+                            PeoplePersonId = 5
+                        },
+                        new
+                        {
+                            LanguagesLanguageId = 5,
+                            PeoplePersonId = 5
                         });
                 });
 
@@ -374,15 +420,15 @@ namespace First_MVC_App.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "012f97f5-514b-462a-9611-7854aa56f747",
-                            ConcurrencyStamp = "41093f27-14c9-4782-be22-6e2bc2a883c7",
+                            Id = "3856b034-8994-4699-bb49-cc8bfb3a8874",
+                            ConcurrencyStamp = "c79c453a-0cb5-4533-b1fa-877898cd070a",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "7d3e150c-be18-487e-ab4b-a26b70f4b400",
-                            ConcurrencyStamp = "0fa06944-71eb-4403-8ca8-14d5fd9bd5be",
+                            Id = "dd7a3b36-26f5-4021-93f2-fe91bd9da016",
+                            ConcurrencyStamp = "c8be657c-e140-4b56-9650-81ebaec716c1",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -479,8 +525,8 @@ namespace First_MVC_App.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "a282bab9-7993-43c8-932f-10014e91466a",
-                            RoleId = "012f97f5-514b-462a-9611-7854aa56f747"
+                            UserId = "83864392-bfd8-4f36-830a-a61445f88f56",
+                            RoleId = "3856b034-8994-4699-bb49-cc8bfb3a8874"
                         });
                 });
 
@@ -508,7 +554,7 @@ namespace First_MVC_App.Migrations
             modelBuilder.Entity("First_MVC_App.Models.City", b =>
                 {
                     b.HasOne("First_MVC_App.Models.Country", "Country")
-                        .WithMany("CityList")
+                        .WithMany("Cities")
                         .HasForeignKey("CountryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -519,7 +565,7 @@ namespace First_MVC_App.Migrations
             modelBuilder.Entity("First_MVC_App.Models.Person", b =>
                 {
                     b.HasOne("First_MVC_App.Models.City", "City")
-                        .WithMany("PersonList")
+                        .WithMany("People")
                         .HasForeignKey("CityId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -531,13 +577,13 @@ namespace First_MVC_App.Migrations
                 {
                     b.HasOne("First_MVC_App.Models.Language", null)
                         .WithMany()
-                        .HasForeignKey("LanguageListLanguageId")
+                        .HasForeignKey("LanguagesLanguageId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("First_MVC_App.Models.Person", null)
                         .WithMany()
-                        .HasForeignKey("PeopleListId")
+                        .HasForeignKey("PeoplePersonId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -595,12 +641,12 @@ namespace First_MVC_App.Migrations
 
             modelBuilder.Entity("First_MVC_App.Models.City", b =>
                 {
-                    b.Navigation("PersonList");
+                    b.Navigation("People");
                 });
 
             modelBuilder.Entity("First_MVC_App.Models.Country", b =>
                 {
-                    b.Navigation("CityList");
+                    b.Navigation("Cities");
                 });
 #pragma warning restore 612, 618
         }

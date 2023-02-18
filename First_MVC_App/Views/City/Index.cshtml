@@ -1,29 +1,11 @@
-﻿@model IEnumerable<City>
+﻿@model CountryViewModel
+
 @{
-    ViewData["Title"] = "CityIndex";
+    ViewData["Title"] = "Home";
 }
 
-<h1>List of cities </h1>
-
-<div><a asp-action="Create" class="btn btn-primary">Add new country to list </a></div>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>CityName</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var city in Model)
-        {
-                <tr>
-                    <td>@city.CityId</td>
-                    <td>@city.CityName</td>
-                    <td><a asp-action="Delete" asp-route-id=@city.CityId class="btn btn-danger">Delete</a></td>
-                </tr>
-        }
-    </tbody>
-</table>
-
+<form asp-action="EditCountry" method="post">
+    <input type="text" name="CountryName" placeholder="Name" value="@Model.CountryName">
+    <input type="hidden" name="CountryId" value="@Model.CountryId">
+    <input type="submit" value="Add" class="btn btn-primary">
+</form>

@@ -176,32 +176,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Ajax/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWpheFxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/City/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0eVxDcmVhdGUuY3NodG1s
+[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/City/EditPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0eVxFZGl0UGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/City/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0eVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Country/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxDcmVhdGUuY3NodG1s
+[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Country/EditPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxFZGl0UGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Country/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Doctor/FeverCheck.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXEZldmVyQ2hlY2suY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/GuessingGame/GuessingGame.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3Vlc3NpbmdHYW1lXEd1ZXNzaW5nR2FtZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Home/About.cshtml]
@@ -212,68 +200,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Home/Projects.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9qZWN0cy5jc2h0bWw=
+[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Home/EditPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0UGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Language/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZ3VhZ2VcQ3JlYXRlLmNzaHRtbA==
+[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Home/Projects.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9qZWN0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Language/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZ3VhZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/People/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVvcGxlXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/People/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVvcGxlXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Shared/_AjaxPersonDetails.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BamF4UGVyc29uRGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Shared/_AjaxPersonListPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BamF4UGVyc29uTGlzdFBhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Shared/_AjaxPersonPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BamF4UGVyc29uUGFydGlhbC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Shared/_CityViewModel.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DaXR5Vmlld01vZGVsLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Shared/_CreateCity.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DcmVhdGVDaXR5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Shared/_CreateLanguage.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DcmVhdGVMYW5ndWFnZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Shared/_CreatePerson.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DcmVhdGVQZXJzb24uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Shared/_LanguageViewModel.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYW5ndWFnZVZpZXdNb2RlbC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Shared/_PeopleViewModel.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QZW9wbGVWaWV3TW9kZWwuY3NodG1s
+[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/_ViewImports.cshtml]
@@ -283,3 +231,7 @@ build_metadata.AdditionalFiles.CssScope =
 [D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/First_MVC_Project/First_MVC_App/First_MVC_App/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-m9tuel5354

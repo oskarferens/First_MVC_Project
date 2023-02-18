@@ -1,0 +1,70 @@
+﻿@model PeopleViewModel
+
+@{
+    ViewData["Title"] = "People";
+}
+
+@if (!User.Identity.IsAuthenticated)
+{
+    <h2>You have to log in to view people</h2>
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="text-center">
+        <form asp-action="Create" method="post">
+            <input type="text" name="Name" placeholder="Name">
+            <input type="text" name="PhoneNumber" placeholder="Phone">
+            <select id="selectlist" name="CityId" asp-items="@ViewBag.Cities"></select>
+            <input type="submit" value="Add" class="btn btn-primary">
+        </form>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Phone number
+                </th>
+                <th>
+                    City
+                </th>
+                <th>
+                    Country
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.people)
+            {
+                <tr>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.PhoneNumber
+                    </td>
+                    <td>
+                        @item.City.CityName
+                    </td>
+                    <td>
+                        @item.City.Country.CountryName
+                    </td>
+                    <td>
+                        <a asp-action="EditPage" asp-controller="Home" asp-route-id=@item.PersonId class="btn btn-primary">Edit</a>
+                    </td>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <td>
+                            <a asp-action="Delete" asp-controller="Home" asp-route-id=@item.PersonId class="btn btn-danger">Delete</a>
+                        </td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+}
