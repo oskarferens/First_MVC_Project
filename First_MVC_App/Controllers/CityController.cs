@@ -24,7 +24,6 @@ namespace First_MVC_App.Controllers
             CityViewModel cityViewModel = new CityViewModel();
             cityViewModel.countries = _context.Cities.Include(x => x.Country).ToList();
 
-
             ViewBag.Countries = new SelectList(_context.Countries, "CountryId", "CountryName");
 
             return View(cityViewModel);
