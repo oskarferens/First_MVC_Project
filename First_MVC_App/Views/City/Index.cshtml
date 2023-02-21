@@ -1,11 +1,48 @@
-﻿@model CountryViewModel
+﻿@model CityViewModel
 
 @{
-    ViewData["Title"] = "Home";
+    ViewData["Title"] = "Cities";
 }
 
-<form asp-action="EditCountry" method="post">
-    <input type="text" name="CountryName" placeholder="Name" value="@Model.CountryName">
-    <input type="hidden" name="CountryId" value="@Model.CountryId">
-    <input type="submit" value="Add" class="btn btn-primary">
-</form>
+@if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+{
+    <div class="text-center">
+        <form asp-action="Create" method="post">
+            <input type="text" name="Name" placeholder="City name">
+            <select id="selectlist" name="CountryId" asp-items="@ViewBag.Countries"></select>
+            <input type="submit" value="Add city" class="btn btn-primary">
+        </form>
+    </div>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                City
+            </th>
+            <th>
+                Country
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.countries)
+        {
+            <tr>
+                <td>
+                    @item.CityName
+                </td>
+                <td>
+                    @item.Country.CountryName
+                </td>
+                <td>
+                    <a asp-action="EditPage" asp-controller="City" asp-route-id=@item.CityId class="btn btn-primary">Edit</a>
+                </td>
+                <td>
+                    <a asp-action="Delete" asp-controller="City" asp-route-id=@item.CityId class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
