@@ -11,6 +11,7 @@ namespace First_MVC_App.ViewModels
         public string Search { get; set; }
         public bool CaseSensitive { get; set; }
         public int? CityId { get; set; }
+        public string CityName { get; set; }
         public List<Language>? Languages { get; set; }
         public List<int>? LanguageIds { get; set; }
         public List<SelectListItem> cities { get; set; }
@@ -32,5 +33,14 @@ namespace First_MVC_App.ViewModels
         [Display(Name = "Language")]
         [Required]
         public string Language { get; set; }
+        public static void SeedPeople()
+        {
+            PeopleList.Add(new Person(1, "Olof Olofsson", "0733456028", "Göteborg"));
+            PeopleList.Add(new Person(2, "Per Persson", "0722456128", "Stockholm"));
+            PeopleList.Add(new Person(3, "Anders Andersson", "0736426028", "Malmö"));
+            PeopleList.Add(new Person(4, "Rolf Rolfsson", "0733456843", "Borås"));
+            PeopleList.Add(new Person(5, "Björn Björnsson", "0733444028", "Göteborg"));
+            PeopleList.Add(new Person(6, "Olof Olofsson", "0733456028", "Göteborg"));
+        }
     }
 }

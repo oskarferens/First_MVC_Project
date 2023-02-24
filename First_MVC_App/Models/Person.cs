@@ -14,15 +14,15 @@ namespace First_MVC_App.Models
         public string PhoneNumber { get; set; }
         public int CityId { get; set; }
         public int LanguageId { get; set; }
-        public City City { get; set; }
+        public string City { get; set; }
         public List<Language> LanguageList { get; set; } = new();
 
-        public Person(int id, string name, string phoneNumber, int cityId)
+        public Person(int id, string name, string phoneNumber, string cityName)
         {
             Id = id;
             Name = name;
             PhoneNumber = phoneNumber;
-            CityId = cityId;
+            City = cityName;
         }
     }
 }
