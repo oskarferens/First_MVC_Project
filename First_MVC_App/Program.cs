@@ -42,6 +42,10 @@ app.MapControllerRoute(
     pattern: "game",
     defaults: new { controller = "GuessingGame", action = "GuessingGame" });
 
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Ajax}/{action=Index}/{id?}");
+
 app.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=About}/{id?}");
 
 app.Run();

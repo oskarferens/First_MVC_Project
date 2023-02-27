@@ -1,4 +1,4 @@
-﻿Ohh@model Person
+﻿@model Person
 
 @if (Model == null)
 {
@@ -11,15 +11,12 @@
 else
 {
         <div class="card p-4">
-            <div class="row">
-                <div class="col fw-bold">Name</div>
-                <div class="col fw-bold">Phone Number</div>
-                <div class="col fw-bold">City</div>
-            </div>
-            <div class="row">
-                <div class="col"><span>@Model.Name</span></div>
-                <div class="col"><span>@Model.PhoneNumber</span></div>
-                <div class="col"><span>@Model.City</span></div>
-            </div>
+            <div class="col">@Model.Id</div>
+            <div class="col">@Model.Name</div>
+            <div class="col">@Model.City</div>
+            <div class="col">@Model.PhoneNumber</div>
+            <a asp-action="DeletePerson" 
+                asp-controller="Ajax" asp-route-id=@Model.Id class="btn btn-danger">Delete</a>
+
         </div>
 }

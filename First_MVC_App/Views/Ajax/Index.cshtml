@@ -11,7 +11,6 @@
 <div id="show-getPeople-section"></div>
 
 <script>
-
     function getPeople() {
         $.ajax({
             type: "GET",
@@ -21,6 +20,7 @@
             }
         })
     }
+
     function deletePerson() {
         var id = $("#person-id").val();
 
@@ -33,6 +33,7 @@
             }
         })
     }
+
     function showPersonDetail() {
         var id = $("#person-id").val();
 

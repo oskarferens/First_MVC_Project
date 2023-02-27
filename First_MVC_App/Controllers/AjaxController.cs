@@ -1,7 +1,6 @@
 ﻿using First_MVC_App.Models;
 using First_MVC_App.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using System.Net;
 
 namespace First_MVC_App.Controllers
 {
@@ -14,7 +13,6 @@ namespace First_MVC_App.Controllers
             return View();
         }
 
-        [HttpGet]
         public IActionResult GetPeople()
         {
             if (PeopleViewModel.PeopleList.Count == 0)
@@ -24,11 +22,11 @@ namespace First_MVC_App.Controllers
 
             vm.tempList = PeopleViewModel.PeopleList;
 
-            return PartialView("_AjaxListPeoplePartial" ,vm);
+            return PartialView("_AjaxListPeoplePartial");
         }
 
         [HttpPost]
-        public IActionResult DeletePerson(int id)
+        public IActionResult DeletePerson(string id)
         {
             var personToDelete = PeopleViewModel.PeopleList.FirstOrDefault(p => p.Id == id);
 
@@ -41,9 +39,9 @@ namespace First_MVC_App.Controllers
         }
 
         [HttpPost]
-        public IActionResult ShowPersonDetail(int id)
+        public IActionResult ShowPersonDetail(string id)
         {
-            Person? person = PeopleViewModel.PeopleList.FirstOrDefault(p => p.Id == id);
+            Person person = PeopleViewModel.PeopleList.FirstOrDefault(p => p.Id == id);
 
             if (person == null)
             {

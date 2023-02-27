@@ -1,43 +1,47 @@
-﻿@model IEnumerable<Person>
+﻿@model PeopleViewModel
 @{
-    ViewData["Title"] = "PeopleIndex";
+    ViewData["Title"] = "Index";
 }
 
-<h1>List of people </h1>
+<h1>List of people</h1>
 
-<div><a asp-action="Create" class="btn btn-primary">Add new people to list </a></div>
-
+<p>
+    <a asp-action="Create">Add new person</a>
+</p>
+<h2>Show data as table:</h2>
 <table class="table">
     <thead>
         <tr>
-
+            <th>Id</th>
             <th>Name</th>
-            <th>PhoneNumber</th>
             <th>City</th>
-            <th>Languages</th>
+            <th>Phone number</th>
+            <th> </th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var person in Model)
+        @foreach (var person in Model.tempList)
         {
             <tr>
+                <td>@person.Id</td>
                 <td>@person.Name</td>
-                <td>@person.PhoneNumber</td>
                 <td>@person.City</td>
-                <td>
-                    <ul>
-                        @foreach (var language in person.LanguageList)
-                        {
-                            <li>
-                                @language.Name
-                            </li>
-                        }
-                    </ul>
-                </td>
-                
-                <td><a asp-action="Delete" asp-route-id=@person.Id class="btn btn-danger">Delete</a></td>
+                <td>@person.PhoneNumber</td>
+                <td><a asp-action="Delete" asp-route-id=@person.Id class="btn btn-danger">Delete</a> </td>
             </tr>
         }
     </tbody>
 </table>
 
+<h2>Show data as partial:</h2>
+<div class="row">
+    <h6 class="col">Id</h6>
+    <h6 class="col">Name</h6>
+    <h6 class="col">CityName</h6>
+    <h6 class="col">Phone number</h6>
+    <h6 class="col"> </h6>
+</div>
+@foreach (var person in Model.tempList)
+{
+    <partial name="_AjaxPeoplePartial" model="person" />
+}

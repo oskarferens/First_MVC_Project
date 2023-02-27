@@ -11,7 +11,7 @@ namespace First_MVC_App.Controllers
     public class PeopleController : Controller
     {
         private readonly ApplicationDbContext _context;
-        public static PeopleViewModel peopleViewModel { get; set; } = new PeopleViewModel();
+        public static PeopleViewModel peopleViewModel = new PeopleViewModel();
 
         public PeopleController(ApplicationDbContext context)
         {
@@ -19,8 +19,14 @@ namespace First_MVC_App.Controllers
         }
         public IActionResult Index()
         {
-            var people = _context.PeopleList.Include(x => x.City).Include(y => y.LanguageList).ToList();
-            return View(people);
+            if (PeopleViewModel.PeopleList.Count == 0)
+            {
+                PeopleViewModel.SeedPeople();
+            }
+
+            peopleViewModel.tempList = PeopleViewModel.PeopleList;
+
+            return View(peopleViewModel);
         }
 
         public IActionResult Create()
@@ -47,7 +53,7 @@ namespace First_MVC_App.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult Delete(int Id)
+        public IActionResult Delete(string Id)
         {
             var personToRemove = _context.PeopleList.FirstOrDefault(x => x.Id == Id);
             if (personToRemove != null)

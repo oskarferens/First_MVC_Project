@@ -26,9 +26,9 @@ namespace First_MVC_App.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Person>().HasData(new Person { Id = 1, Name = "Oskar F", CityId = 1, PhoneNumber = "031 123 345" });
-            modelBuilder.Entity<Person>().HasData(new Person { Id = 2, Name = "Ronnie C", CityId = 2, PhoneNumber = "0976 123 321" });
-            modelBuilder.Entity<Person>().HasData(new Person { Id = 3, Name = "Niklas A", CityId = 3, PhoneNumber = "846 346 836" });
+            modelBuilder.Entity<Person>().HasData(new Person { Id = "1", Name = "Oskar F", CityId = 1, PhoneNumber = "031 123 345" });
+            modelBuilder.Entity<Person>().HasData(new Person { Id = "2", Name = "Ronnie C", CityId = 2, PhoneNumber = "0976 123 321" });
+            modelBuilder.Entity<Person>().HasData(new Person { Id = "3", Name = "Niklas A", CityId = 3, PhoneNumber = "846 346 836" });
 
             modelBuilder.Entity<Country>().HasData(new Country { CountryId = 1, CountryName = "Sweden" });
             modelBuilder.Entity<Country>().HasData(new Country { CountryId = 2, CountryName = "USA" });
