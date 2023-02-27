@@ -33,15 +33,3 @@
     </tbody>
 </table>
 
-<h2>Show data as partial:</h2>
-<div class="row">
-    <h6 class="col">Id</h6>
-    <h6 class="col">Name</h6>
-    <h6 class="col">CityName</h6>
-    <h6 class="col">Phone number</h6>
-    <h6 class="col"> </h6>
-</div>
-@foreach (var person in Model.tempList)
-{
-    <partial name="_AjaxPeoplePartial" model="person" />
-}

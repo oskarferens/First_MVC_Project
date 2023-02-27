@@ -19,10 +19,10 @@
                 <li><a asp-controller="Home" asp-action="Projects">Project</a></li>
                 <li><a asp-controller="Doctor" asp-action="FeverCheck">Doctor</a></li>
                 <li><a asp-controller="GuessingGame" asp-action="GuessingGame">GuessingGame</a></li>
-                <li><a asp-controller="People" asp-action="Index">People</a></li>
                 <li><a asp-controller="Country" asp-action="Index">Country</a></li>
                 <li><a asp-controller="City" asp-action="Index">City</a></li>
                 <li><a asp-controller="Language" asp-action="Index">Language</a></li>
+                <li><a asp-controller="People" asp-action="Index">People</a></li>
                 <li><a asp-controller="Ajax" asp-action="Index">Ajax</a></li>
             </ul>
         </nav>
@@ -37,6 +37,7 @@
             &copy; @DateTime.Now.ToString("yyyy-MM-dd") Oskar Ferens
         </p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     @await RenderSectionAsync("Scripts", required:false)
 </body>
 </html>

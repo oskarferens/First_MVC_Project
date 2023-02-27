@@ -13,6 +13,7 @@ namespace First_MVC_App.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult GetPeople()
         {
             if (PeopleViewModel.PeopleList.Count == 0)
@@ -22,7 +23,7 @@ namespace First_MVC_App.Controllers
 
             vm.tempList = PeopleViewModel.PeopleList;
 
-            return PartialView("_AjaxListPeoplePartial");
+            return PartialView("_AjaxListPeoplePartial", vm);
         }
 
         [HttpPost]
@@ -35,7 +36,7 @@ namespace First_MVC_App.Controllers
                 PeopleViewModel.PeopleList.Remove(personToDelete);
             }
 
-            return RedirectToAction("GetPeople");
+            return Json(id + " was deleted, status: " + StatusCode(200).StatusCode);
         }
 
         [HttpPost]
